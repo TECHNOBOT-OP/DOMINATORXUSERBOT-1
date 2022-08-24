@@ -26,7 +26,7 @@ else:
 
 LOGS = getLogger(__name__)
 
-bot = Hell
+bot = Dominator
 tbot = DominatorBot
 
 
@@ -55,8 +55,8 @@ if not Config.DB_URI:
     quit(1)
 
 
-if not Config.ULTRONBOT_SESSION:
-    LOGS.warning("Please fill var ULTRONBOT_SESSION to continue.")
+if not Config.DOMINATORBOT_SESSION:
+    LOGS.warning("Please fill var DOMINATORBOT_SESSION to continue.")
     quit(1)
 
 
