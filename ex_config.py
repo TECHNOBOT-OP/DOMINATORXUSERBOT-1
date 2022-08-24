@@ -1,7 +1,7 @@
 # EDIT THIS FILE AND RENAME TO config.py TO MAKE THIS BOT WORKING
 # FILL THESE VALUES ACCORDINGLY.
 
-from DominatorBot.config.hell_config import Config
+from DominatorBot.config.dominator_config import Config
 
 class Development(Config):
   # get these values from my.telegram.org. 
