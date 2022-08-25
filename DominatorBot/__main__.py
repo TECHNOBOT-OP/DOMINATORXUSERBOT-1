@@ -7,18 +7,18 @@ from telethon import Button, TelegramClient
 from telethon.utils import get_peer_id
 
 from DominatorBot import LOGS, bot, tbot
-from DominatorBot.clients.session import Hell, H2, H3, H4, H5
+from DominatorBot.clients.session import Dominator, H2, H3, H4, H5
 from DominatorBot.config import Config
 from DominatorBot.utils import join_it, load_module, logger_check, start_msg, update_sudo, plug_channel
-from DominatorBot.version import __hell__ as hellver
+from DominatorBot.version import __dominator__ as dominatorver
 
 hl = Config.HANDLER
 
-HELL_PIC = "https://telegra.ph/file/82b8456afa0fbdc81ae3d.jpg"
+DOMINATOR_PIC = "https://te.legra.ph/file/c414381b7f545421a0b7c.jpg"
 
 
 # Client Starter
-async def hells(session=None, client=None, session_name="Main"):
+async def dominators(session=None, client=None, session_name="Main"):
     if session:
         LOGS.info(f"••• Starting Client [{session_name}] •••")
         try:
@@ -35,8 +35,8 @@ async def hells(session=None, client=None, session_name="Main"):
 async def plug_load(path):
     files = glob.glob(path)
     for name in files:
-        with open(name) as hell:
-            path1 = Path(hell.name)
+        with open(name) as dominator:
+            path1 = Path(dominator.name)
             shortname = path1.stem
             if shortname.replace(".py", "") in Config.UNLOAD:
                 os.remove(Path(f"DominatorBot/plugins/{shortname}.py"))
@@ -45,10 +45,10 @@ async def plug_load(path):
 
 
 # Final checks after startup
-async def hell_is_on(total):
+async def dominator_is_on(total):
     await update_sudo()
     await logger_check(bot)
-    await start_msg(tbot, HELL_PIC, hellver, total)
+    await start_msg(tbot, DOMINATOR_PIC, dominatorver, total)
     await join_it(bot)
     await join_it(H2)
     await join_it(H3)
@@ -62,32 +62,32 @@ async def start_DominatorBot():
         tbot_id = await tbot.get_me()
         Config.BOT_USERNAME = f"@{tbot_id.username}"
         bot.tgbot = tbot
-        LOGS.info("ULTRON BOT READY TO RUN")
-        C1 = await hells(Config.ULTRONBOT_SESSION, bot, "ULTRONBOT_SESSION")
-        C2 = await hells(Config.SESSION_2, H2, "SESSION_2")
-        C3 = await hells(Config.SESSION_3, H3, "SESSION_3")
-        C4 = await hells(Config.SESSION_4, H4, "SESSION_4")
-        C5 = await hells(Config.SESSION_5, H5, "SESSION_5")
+        LOGS.info("DOMINATOR BOT READY TO RUN")
+        C1 = await dominators(Config.DOMINATORBOT_SESSION, bot, "DIMINATORBOT_SESSION")
+        C2 = await dominators(Config.SESSION_2, H2, "SESSION_2")
+        C3 = await dominators(Config.SESSION_3, H3, "SESSION_3")
+        C4 = await dominators(Config.SESSION_4, H4, "SESSION_4")
+        C5 = await dominators(Config.SESSION_5, H5, "SESSION_5")
         await tbot.start()
         total = C1 + C2 + C3 + C4 + C5
-        LOGS.info("╔════❰ԱӀէɾօղ Աʂҽɾβօէ❱═❍⊱❁")
-        LOGS.info("║┣⪼ 𝕊𝕥𝕒𝕣𝕥𝕚𝕟𝕘. 𝕌𝕝𝕥𝕣𝕠𝕟 𝕌𝕤𝕖𝕣𝔹𝕠𝕠𝕥")
+        LOGS.info("╔════❰𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗 Աʂҽɾβօէ❱═❍⊱❁")
+        LOGS.info("║┣⪼ 𝕊𝕥𝕒𝕣𝕥𝕚𝕟𝕘. 𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗 𝕌𝕤𝕖𝕣𝔹𝕠𝕠𝕥")
         LOGS.info("║┣⪼ 𝕊𝕥𝕒𝕣𝕥𝕚𝕟𝕘. 𝕃𝕠𝕕𝕚𝕟𝕘...")
         LOGS.info("╚══════════════════❍⊱")
         await plug_load("DominatorBot/plugins/*.py")
         await plug_channel(bot, Config.PLUGIN_CHANNEL)
-        LOGS.info(f"""『🔱ԱӀէɾօղ Աʂҽɾβօէ🔱』➙𖤍࿐ IS ON!!! ԱӀէɾօղ Աʂҽɾβօէ VERSION :- 𝕍:𝕒 𝟙.𝟘
-                      TYPE :- " .gpromote @LegendHacker_IIN & @thanospros " OR .help OR .ping CHECK IF I'M ON!
-                      ╔════❰ ԱӀէɾօղ Աʂҽɾβօէ ❱═❍⊱❁
-                      ║┣⪼ OWNER - 𝕃𝕖𝕘𝕖𝕟𝕕ℍ𝕒𝕔𝕜𝕖𝕣 & 𝕋𝕙𝕒𝕟𝕠𝕤𝔹𝕠𝕪
+        LOGS.info(f"""『🔱𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗 Աʂҽɾβօէ🔱』➙𖤍࿐ IS ON!!! 𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗 Աʂҽɾβօէ VERSION :- 𝕍:𝕒 𝟙.𝟘
+                      TYPE :- " .gpromote @N1xDOMINATOR " OR .help OR .ping CHECK IF I'M ON!
+                      ╔════❰ 𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗 Աʂҽɾβօէ ❱═❍⊱❁
+                      ║┣⪼ OWNER - @N1xDOMINATOR
                       ║┣⪼ Ultra Real Stick Bot 
-                      ║┣⪼ CREATOR -@LegendHacker_IIN & @thanospros
+                      ║┣⪼ CREATOR - N1xDOMINATOR
                       ║┣⪼ TELETHON - 1.2.0
-                      ║┣⪼ ✨ 『🔱🆄🅻🆃🆁🅾🅽🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
+                      ║┣⪼ ✨ 『🔱𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
                       ║╰━━━━━━━━━━━━━━━➣
                       ╚══════════════════❍⊱""")
         LOGS.info(f"» Total Clients = {str(total)} «")
-        await hell_is_on(total)
+        await dominator_is_on(total)
     except Exception as e:
         LOGS.error(f"{str(e)}")
         sys.exit()
