@@ -27,7 +27,7 @@ async def kk(event):
     _o = o.split("\n")
     o = "\n".join(_o)
     OUTPUT = f"""
-<h1>List of Plugins in ԱӀէɾօղβօէ :</h1>
+<h1>List of Plugins in ԱӀէɾＤօᵐıη𝒶𝓽𝔬ｒ乃ᵒ𝓽 :</h1>
 
 <code>{o}</code>
 
@@ -35,8 +35,8 @@ async def kk(event):
 
 <b><a href='https://t.me/DominatorBot_XD'>@DominatorBot_XD</a></b>
 """
-    dominator = await telegraph_paste("All available plugins in ԱӀէɾօղβօէ Ɠɾօմք", OUTPUT)
-    await eor(event, f"[All available plugins in ԱӀէɾօղβօէ]({dominator})", link_preview=False)
+    dominator = await telegraph_paste("All available plugins in Ｄօᵐıη𝒶𝓽𝔬ｒ乃ᵒ𝓽 Ɠɾօմք", OUTPUT)
+    await eor(event, f"[All available plugins in Ｄօᵐıη𝒶𝓽𝔬ｒ乃ᵒ𝓽]({dominator})", link_preview=False)
 
 
 @Dominator_cmd(pattern="send ([\s\S]*)")
@@ -46,7 +46,7 @@ async def send(event):
     message_id = event.reply_to_msg_id or event.message.id
     thumb = dominator_logo
     input_str = event.pattern_match.group(1)
-    omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {dominator_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ ԱӀէɾօղβօէ ]({chnl_link})** ⚡"
+    omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {dominator_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ Ｄօᵐıη𝒶𝓽𝔬ｒ乃ᵒ𝓽 ]({chnl_link})** ⚡"
     the_plugin_file = "./DominatorBot/plugins/{}.py".format(input_str.lower())
     if os.path.exists(the_plugin_file):
         await event.client.send_file(
