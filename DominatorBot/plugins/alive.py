@@ -12,29 +12,25 @@ from . import *
 
 ALIVE_TEMP = """
 ┏━━━━━━━━━━━━━━━━━━━━━━━━━┓
-┣<b><i>🔥🔥ԱӀէɾօղβօէ įʂ ටղƑìɾҽ🔥🔥</b></i>
-┣<i><b>--ԱӀէɾօղ Աʂҽɾ--</i></b> : 『 <a href='tg://user?id={}'>{}</a> 』
+┣<b><i>🔥🔥∂σмιηαтσявσтէ įʂ ටղƑìɾҽ🔥🔥</b></i>
+┣<i><b>--∂σмιηαтσяԱʂҽɾ--</i></b> : 『 <a href='tg://user?id={}'>{}</a> 』
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━┛
 ╔════✣✤༻⋇༺✤✣════╗
 ┣─ <b>♦️ ͲҽӀҽէհօղ ┣</b> <i>{}</i>
-┣─ <b>♦️ ԱӀէɾօղβօէ ┣</b> <i>{}</i>
+┣─ <b>♦️ ∂σмιηαтσявσтէ ┣</b> <i>{}</i>
 ┣─ <b>♦️ ʂմժօ ┣</b> <i>{}</i>
 ┣─ <b>♦️βօէ Աքէìʍҽ ┣</b> <i>{}</i>
 ┣─ <b>♦️βօէ φìղց ┣</b> <i>{}</i>
 ╚════✣✤༻⋇༺✤✣════╝
-╔══════════✣✤༻⋇༺✤✣════════╗
-┣<b><i>. <a href='https://t.me/LegendHacker_IIN'>[🅻🅴🅶🅴🅽🅳🅷🅰🅲🅺🅴🆁]</a> .</i></b>
-┣<b><i>. <a href='https://t.me/LegendHacker_IIN'>[🆃🅷🅰🅽🅾🆂🅱🅾🆈]</a> .</i></b>
-╚══════════✣✤༻⋇༺✤✣════════╝
-┏━━━━━(φօաҽɾƑմӀӀ=ԱӀէɾօղβօէ)━━━━━┓
-┣─<b><i>💥💥💥 <a href='https://t.me/DominatorBot_XD'>[♦️ටղƑìɾҽ-ԱӀէɾօղβօէ♦️]</a> 💥💥💥</i></b>
+┏━━━━━(φօաҽɾƑմӀӀ=∂σмιηαтσявσт)━━━━━┓
+┣─<b><i>💥💥💥 <a href='https://t.me/DominatorBot_XD'>[♦️ටղƑìɾҽ-∂σмιηαтσявσтէ♦️]</a> 💥💥💥</i></b>
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 """
 
 msg = """{}\n
 <b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
 <b>Telethon ≈</b>  <i>{}</i>
-<b>Ultronẞø† ≈</b>  <i>{}</i>
+<b>∂σмιηαтσявσт ≈</b>  <i>{}</i>
 <b>Uptime ≈</b>  <i>{}</i>
 <b>Abuse ≈</b>  <i>{}</i>
 <b>Sudo ≈</b>  <i>{}</i>
@@ -46,7 +42,7 @@ async def up(event):
     cid = await client_id(event)
     ForGo10God, DOMINATOR_USER, dominator_mention = cid[0], cid[1], cid[2]
     start = datetime.datetime.now()
-    dominator = await eor(event, "`ԱӀէɾօղβօէ įʂ ටղƑìɾҽ....`")
+    dominator = await eor(event, "`∂σмιηαтσявσт įʂ ටղƑìɾҽ....`")
     uptime = await get_time((time.time() - StartTime))
     a = gvarstat("ALIVE_PIC")
     pic_list = []
@@ -66,12 +62,12 @@ async def up(event):
 
 
 
-@Dominator_cmd(pattern="ultron$")
+@Dominator_cmd(pattern="bot$")
 async def dominator_a(event):
     cid = await client_id(event)
     ForGo10God, DOMINATOR_USER, dominator_mention = cid[0], cid[1], cid[2]
     uptime = await get_time((time.time() - StartTime))
-    am = gvarstat("ALIVE_MSG") or "<b>🔥🔥ԱӀէɾօղβօէ įʂ ටղƑìɾҽ🔥🔥</b>"
+    am = gvarstat("ALIVE_MSG") or "<b>🔥🔥∂σмιηαтσявσтէ įʂ ටղƑìɾҽ🔥🔥</b>"
     try:
         dominator = await event.client.inline_query(Config.BOT_USERNAME, "alive")
         await dominator[0].click(event.chat_id)
@@ -84,7 +80,7 @@ async def dominator_a(event):
 CmdHelp("alive").add_command(
   "alive", None, "Shows the Default Alive Message"
 ).add_command(
-  "ultron", None, "Shows Inline Alive Menu with more details."
+  "dominator", None, "Shows Inline Alive Menu with more details."
 ).add_warning(
   "✅ Harmless Module"
 ).add()
