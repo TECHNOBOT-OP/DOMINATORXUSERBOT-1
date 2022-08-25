@@ -52,13 +52,13 @@ def load_module(shortname):
         name = "DominatorBot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-        mod.bot = Hell
-        mod.H1 = Hell
+        mod.bot = Dominator
+        mod.H1 = Dominator
         mod.H2 = H2
         mod.H3 = H3
         mod.H4 = H4
         mod.H5 = H5
-        mod.Hell = Hell
+        mod.Dominator = Dominator
         mod.DominatorBot = DominatorBot
         mod.tbot = DominatorBot
         mod.tgbot = bot.tgbot
@@ -77,7 +77,7 @@ def load_module(shortname):
         mod.eod = delete_hell
         mod.Var = Config
         mod.admin_cmd = admin_cmd
-        mod.hell_cmd = hell_cmd
+        mod.dominator_cmd = dominator_cmd
         mod.sudo_cmd = sudo_cmd
         # support for other userbots
         sys.modules["userbot.utils"] = DominatorBot.utils
@@ -87,7 +87,7 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         # for imports
         sys.modules["DominatorBot.plugins." + shortname] = mod
-        LOGS.info("💥ԱӀէɾօղβօէ💥 - Successfully Imported " + shortname)
+        LOGS.info("💥Domintaorβօէ💥 - Successfully Imported " + shortname)
 
 
 # remove plugins
@@ -111,8 +111,8 @@ def remove_plugin(shortname):
 
 async def plug_channel(client, channel):
     if channel:
-        LOGS.info("💥ԱӀէɾօղβօէ💥 - PLUGIN CHANNEL DETECTED.")
-        LOGS.info("💥ԱӀէɾօղβօէ💥 - Starting to load extra plugins.")
+        LOGS.info("💥Dominatorβօէ💥 - PLUGIN CHANNEL DETECTED.")
+        LOGS.info("💥Dominatorβօէ💥 - Starting to load extra plugins.")
         plugs = await client.get_messages(channel, None, filter=InputMessagesFilterDocument)
         total = int(plugs.total)
         for plugins in range(total):
