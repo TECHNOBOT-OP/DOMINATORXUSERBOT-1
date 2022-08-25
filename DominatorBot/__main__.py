@@ -14,7 +14,7 @@ from DominatorBot.version import __dominator__ as dominatorver
 
 hl = Config.HANDLER
 
-DOMINATOR_PIC = "https://te.legra.ph/file/c414381b7f545421a0b7c.jpg"
+DOMINATOR_PIC = "https://telegra.ph/file/93f5cc37e28743aeef809.mp4"
 
 
 # Client Starter
@@ -81,7 +81,7 @@ async def start_DominatorBot():
                       ╔════❰ 𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗 Աʂҽɾβօէ ❱═❍⊱❁
                       ║┣⪼ OWNER - @N1xDOMINATOR
                       ║┣⪼ Ultra Real Stick Bot 
-                      ║┣⪼ CREATOR - N1xDOMINATOR
+                      ║┣⪼ CREATOR - @N1xDOMINATOR
                       ║┣⪼ TELETHON - 1.2.0
                       ║┣⪼ ✨ 『🔱𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗🔱』𝐔𝐬𝐞𝐫𝐛𝐨𝐭✨
                       ║╰━━━━━━━━━━━━━━━➣
