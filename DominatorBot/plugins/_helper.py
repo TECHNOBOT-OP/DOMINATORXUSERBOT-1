@@ -8,7 +8,7 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot, BotInl
 from . import *
 
 msg = f"""
-**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**
+**⚡ ʟɛɢɛռɖaʀʏ ᴀғ Ｄօᵐıη𝒶𝓽𝔬ｒ乃ᵒ𝓽 ⚡**
   •        [📑 Repo 📑](https://github.com/The-DominatorBot/DominatorBot)
   •        [DominatorBot Network](https://t.me/DominatorBot_network)
   •  ©️ {dominator_channel} ™
