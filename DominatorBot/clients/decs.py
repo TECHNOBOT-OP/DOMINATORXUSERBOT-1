@@ -10,7 +10,7 @@ from DominatorBot.config import Config
 from DominatorBot.sql.gvar_sql import gvarstat
 
 
-def hell_cmd(
+def dominator_cmd(
     pattern: str = None,
     allow_sudo: bool = True,
     disable_edited: bool = False,
