@@ -7,7 +7,7 @@ from telethon.sessions import StringSession
 from DominatorBot.config import Config
 
 
-if Config.DOMINATOBOT_SESSION:
+if Config.DOMINATORBOT_SESSION:
     session = StringSession(str(Config.DOMINATORBOT_SESSION))
 else:
     session = "DominatorBot"
