@@ -97,7 +97,7 @@ def hell_cmd(
     return decorator
 
 
-def hell_handler(
+def dominator_handler(
     **args,
 ):
     def decorator(func):
