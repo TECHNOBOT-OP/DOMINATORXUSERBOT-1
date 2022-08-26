@@ -13,7 +13,7 @@ else:
     session = "DominatorBot"
 
 try:
-    Hell = TelegramClient(
+    Dominator = TelegramClient(
         session=session,
         api_id=Config.APP_ID,
         api_hash=Config.API_HASH,
