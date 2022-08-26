@@ -1,7 +1,7 @@
 from telethon.utils import get_peer_id
 from telethon.tl.functions.users import GetFullUserRequest
 
-from .session import Hell, H2, H3, H4, H5
+from .session import Dominator, H2, H3, H4, H5
 from DominatorBot.sql.gvar_sql import gvarstat
 
 
@@ -12,7 +12,7 @@ async def clients_list():
         for b in a:
             c = int(b)
             user_ids.append(c)
-    main_id = await Hell.get_me()
+    main_id = await Dominator.get_me()
     user_ids.append(main_id.id)
 
     try:
@@ -50,12 +50,12 @@ async def client_id(event, botid=None):
     if botid is not None:
         uid = await event.client(GetFullUserRequest(botid))
         ForGo10God = uid.user.id
-        HELL_USER = uid.user.first_name
-        hell_mention = f"[{HELL_USER}](tg://user?id={ForGo10God})"
+        DOMINATOR_USER = uid.user.first_name
+        dominator_mention = f"[{DOMINATOR_USER}](tg://user?id={ForGo10God})"
     else:
         client = await event.client.get_me()
         uid = get_peer_id(client)
         ForGo10God = uid
-        HELL_USER = client.first_name
-        hell_mention = f"[{HELL_USER}](tg://user?id={ForGo10God})"
-    return ForGo10God, HELL_USER, hell_mention
+        DOMINATOR_USER = client.first_name
+        dominator_mention = f"[{DOMINATOR_USER}](tg://user?id={ForGo10God})"
+    return ForGo10God, DOMINATOR_USER, dominator_mention
