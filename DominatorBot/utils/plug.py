@@ -73,8 +73,8 @@ def load_module(shortname):
         mod.DominatorBot = bot
         mod.edit_or_reply = edit_or_reply
         mod.eor = edit_or_reply
-        mod.delete_hell = delete_hell
-        mod.eod = delete_hell
+        mod.delete_dominator = delete_dominator
+        mod.eod = delete_dominator
         mod.Var = Config
         mod.admin_cmd = admin_cmd
         mod.dominator_cmd = dominator_cmd
