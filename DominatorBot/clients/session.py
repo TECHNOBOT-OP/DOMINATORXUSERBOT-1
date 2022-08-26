@@ -7,8 +7,8 @@ from telethon.sessions import StringSession
 from DominatorBot.config import Config
 
 
-if Config.ULTRONBOT_SESSION:
-    session = StringSession(str(Config.ULTRONBOT_SESSION))
+if Config.DOMINATOBOT_SESSION:
+    session = StringSession(str(Config.DOMINATORBOT_SESSION))
 else:
     session = "DominatorBot"
 
@@ -22,7 +22,7 @@ try:
         connection_retries=None,
     )
 except Exception as e:
-    print(f"ULTRONBOT_SESSION - {e}")
+    print(f"DOMINATORBOT_SESSION - {e}")
     sys.exit()
 
 
@@ -83,7 +83,7 @@ else:
 
 
 DominatorBot = TelegramClient(
-    session="Hell-TBot",
+    session="Dominato-Bot",
     api_id=Config.APP_ID,
     api_hash=Config.API_HASH,
     connection=ConnectionTcpAbridged,
