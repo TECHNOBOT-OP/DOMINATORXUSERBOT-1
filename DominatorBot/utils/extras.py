@@ -83,7 +83,7 @@ async def edit_or_reply(
 
 
 # delete timeout
-async def delete_dominator(event, text, time=None, parse_mode=None, link_preview=None):
+async def delete_hell(event, text, time=None, parse_mode=None, link_preview=None):
     parse_mode = parse_mode or "md"
     link_preview = link_preview or False
     time = time or 10
