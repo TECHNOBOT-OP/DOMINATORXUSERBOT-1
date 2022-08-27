@@ -63,14 +63,14 @@ async def start_msg(client, pic, version, total):
 <b><i>Clients :</b></i> <code>{str(total)}</code>
 <b><i>Sudo :</b></i> <code>{is_sudo}</code>
 
-<b><i>»» <u><a href='https://t.me/DominatorBot_XD'>💥Dominatorβօէ💥</a></u> ««</i></b>
+<b><i>»» <u><a href='https://t.me/dominator_bot_official'>💥Dominatorβօէ💥</a></u> ««</i></b>
 """
     await client.send_file(
         Config.LOGGER_ID,
         pic,
         caption=text,
         parse_mode="HTML",
-        buttons=[[Button.url("💥Dominatorβօէ💥", "https://t.me/DominatorBot_XD")]],
+        buttons=[[Button.url("💥Dominatorβօէ💥", "https://t.me/dominator_bot_official")]],
     )
 
 
@@ -78,8 +78,8 @@ async def start_msg(client, pic, version, total):
 async def join_it(client):
     if client:
         try:
-            await client(functions.channels.JoinChannelRequest("@DominatorBot_XD"))
-            await client(functions.channels.JoinChannelRequest("@DominatorBot_OP"))
+            await client(functions.channels.JoinChannelRequest("@dominator_bot_official"))
+            await client(functions.channels.JoinChannelRequest("@dominator_bot_official"))
         except BaseException:
             pass
 
