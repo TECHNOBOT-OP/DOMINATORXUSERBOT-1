@@ -100,7 +100,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             else:
                 help_pic = "https://telegra.ph/file/fdcc034f83c1f6372fd4e.jpg"
                 
-                help_msg = f"💥💥 **{dominator_mention}**\n\n💥💥𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣𝔹𝕠𝕥 : `{len(CMD_HELP)}` \n💥💥𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣 ℂ𝕞𝕕: `{len(apn)}`\n💥💥𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣 ℙ𝕒𝕘𝕖𝕤: 1/{veriler[0]}"
+                help_msg = f"💥💥 **{dominator_mention}**\n\n💥💥𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣𝔹𝕠𝕥: `{len(CMD_HELP)}` \n💥💥𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣 ℂ𝕞𝕕: `{len(apn)}`\n💥💥𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣 ℙ𝕒𝕘𝕖𝕤: 1/{veriler[0]}"
                 
                 #help_msg = f"╔═══💫✨💫═══\n"
                 #help_msg = f"┃**{dominator_mention}**\n"
@@ -231,8 +231,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚡ Ꝉҽցҽղժąɾվ ȺƑ 𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣βօէ⚡**",
                 buttons=[
-                    [Button.url("💥 ԱӀէɾօղ ɾҽքօʂ 💥", "https://github.com/dominator454/DOMINATORXBOT")],
-                    [Button.url("💥ԱӀէɾօղβօէ ហҽէաօɾҟ💥", "https://t.me/DominatorBot_OP")],
+                    [Button.url("💥 𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣 ɾҽքօʂ 💥", "https://github.com/dominator454/DOMINATORXBOT")],
+                    [Button.url("💥𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣 ហҽէաօɾҟ💥", "https://t.me/DominatorBot_OP")],
                 ],
             )
 
@@ -345,7 +345,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         auth = await clients_list()
         if event.query.user_id in auth:
             veriler = custom.Button.inline(f"{dominator_emoji} Re-Open Menu {dominator_emoji}", data="reopen")
-            await event.edit(f"**💥💥𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣𝔹𝕠𝕥 𝕄𝕖𝕟𝕦 ℙ𝕣𝕠𝕧𝕚𝕕𝕖𝕣 𝕀𝕤 ℕ𝕠𝕨 ℂ𝕝𝕠𝕤𝕖𝕕💥💥**\n\n**𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣𝔹𝕠𝕥 𝕆𝕗:**  {dominator_mention}\n\n        [©️ԱӀէɾօղβօէ™️]({chnl_link})", buttons=veriler, link_preview=False)   
+            await event.edit(f"**💥💥𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣𝔹𝕠𝕥 𝕄𝕖𝕟𝕦 ℙ𝕣𝕠𝕧𝕚𝕕𝕖𝕣 𝕀𝕤 ℕ𝕠𝕨 ℂ𝕝𝕠𝕤𝕖𝕕💥💥**\n\n**𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣𝔹𝕠𝕥 𝕆𝕗:**  {dominator_mention}\n\n        [©️𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣βօէ™️]({chnl_link})", buttons=veriler, link_preview=False)   
                                 #f"╔═══💫✨💫═══\n"
                                 #f"┃**⚜️ 𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 𝕄𝕖𝕟𝕦 ℙ𝕣𝕠𝕧𝕚𝕕𝕖𝕣 𝕀𝕤 ℕ𝕠𝕨 ℂ𝕝𝕠𝕤𝕖𝕕 ⚜️**\n"
                                 #f"┃**𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 𝕆𝕗 :**  {dominator_mention}\n"  
