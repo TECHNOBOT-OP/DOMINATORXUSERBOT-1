@@ -166,7 +166,7 @@ CmdHelp("bot").add_command(
 ).add_command(
     "kickme", None, "Kicks Yourself from the group."
 ).add_command(
-    "ping", None, "Checks the ping speed of your Hêllẞø†"
+    "ping", None, "Checks the ping speed of your DominatorBot"
 ).add_command(
     "schd", "<secs> - <message>", "Sends your message in given secs", "schd 10 - dominatoro"
 ).add_command(
