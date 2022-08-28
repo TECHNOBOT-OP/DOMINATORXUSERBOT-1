@@ -45,9 +45,9 @@ if "@" in my_group:
     my_group = my_group.replace("@", "")
 
 chnl_link = "https://t.me/DominatorBot_XD"
-dominator_channel = f"[✨ԱӀէɾօղβօէ✨]({chnl_link})"
+dominator_channel = f"[✨ԱᎠօʍìղąէօɾβօէ✨]({chnl_link})"
 grp_link = "https://t.me/DominatorBot_Chat"
-dominator_grp = f"[✨ԱӀէɾօղβօէ Ɠɾօմք✨]({grp_link})"
+dominator_grp = f"[✨Ꭰօʍìղąէօɾβօէ Ɠɾօմք✨]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {mention} :  To mention the user
