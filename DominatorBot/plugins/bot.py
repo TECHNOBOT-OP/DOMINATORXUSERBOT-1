@@ -12,6 +12,7 @@ from telethon.tl.functions.channels import LeaveChannelRequest
 from ..sql.gvar_sql import gvarstat
 from . import *
 
+ping_txt ="""https://telegra.ph/file/fdcc034f83c1f6372fd4e.jpg"""
 ping_txt = """
 <b><i>╰•★★  ℘ơŋɠ ★★•╯</b></i>
 
