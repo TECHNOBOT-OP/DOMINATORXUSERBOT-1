@@ -231,8 +231,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚡ Ꝉҽցҽղժąɾվ ȺƑ ԱӀէɾօղβօէ⚡**",
                 buttons=[
-                    [Button.url("💥 ԱӀէɾօղ ɾҽքօʂ 💥", "https://github.com/LEGENDXTHANOS/DominatorbOT")],
-                    [Button.url("💥ԱӀէɾօղβօէ ហҽէաօɾҟ💥", "https://t.me/DominatorBot_OP")],
+                    [Button.url("💥 ԱӀէɾօղ ɾҽքօʂ 💥", "https://github.com/dominator454/DOMINATORXBOT")],
+                    [Button.url("💥ԱӀէɾօղβօէ ហҽէաօɾҟ💥", "https://t.me/dominator_bot_official")],
                 ],
             )
 
@@ -248,15 +248,15 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.article(
                 "@DominatorBot_XD",
-                text="""**ℍ𝕖𝕪! 𝕋𝕙𝕚𝕤 𝕀𝕤 [ԱӀէɾօղβօէ](https://t.me/DominatorBot_XD) \n𝕐𝕠𝕦 𝕔𝕒𝕟 𝕜𝕟𝕠𝕨 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕖 𝕗𝕣𝕠𝕞 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜𝕤 𝕘𝕚𝕧𝕖𝕟 𝕓𝕖𝕝𝕠𝕨 👇**""",
+                text="""**ℍ𝕖𝕪! 𝕋𝕙𝕚𝕤 𝕀𝕤 [𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗](https://t.me/dominator_bot_official) \n𝕐𝕠𝕦 𝕔𝕒𝕟 𝕜𝕟𝕠𝕨 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕖 𝕗𝕣𝕠𝕞 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜𝕤 𝕘𝕚𝕧𝕖𝕟 𝕓𝕖𝕝𝕠𝕨 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 ԱӀէɾօղ ↻հąղղҽӀ 🔥", "https://t.me/DominatorBot_OP"),
-                        custom.Button.url("⚡ ԱӀէɾօղ Ɠɾօմք ⚡", "https://t.me/DominatorBot_XD"),
+                        custom.Button.url("🔥 Ꭰօʍìղąէօɾβօէ ↻հąղղҽӀ 🔥", "https://t.me/dominator_bot_official"),
+                        custom.Button.url("⚡ Ꭰօʍìղąէօɾβօէ Ɠɾօմք ⚡", "https://t.me/dominator_bot_support"),
                     ],
                     [
-                        custom.Button.url("✨ ԱӀէɾօղ ɾҽքօʂ ✨", "https://github.com/LEGENDXTHANOS/DominatorbOT"),
-                        custom.Button.url("🔰 ԱӀէɾօղ ɾҽքӀʂ 🔰", "https://replit.com/@LEGEND-LX/PYTHONBOT-4"),
+                        custom.Button.url("✨ Ꭰօʍìղąէօɾβօէ ɾҽքօʂ ✨", "https://github.com/dominator454/DOMINATORXBOT"),
+                        custom.Button.url("🔰 Ꭰօʍìղąէօɾβօէ ɾҽքӀʂ 🔰", "https://replit.com/@dominator454/stringforbot?v=1"),
                     ],
                 ],
                 link_preview=False,
@@ -270,7 +270,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         if event.query.user_id in auth:
             reply_pop_up_alert = "This is for Other Users..."
         else:
-            reply_pop_up_alert = "🔰 𝕋𝕙𝕚𝕤 𝕚𝕤 𝕌𝕝𝕥𝕣𝕠𝕟𝔹𝕠𝕥 ℙ𝕄 𝕊𝕖𝕔𝕦𝕣𝕚𝕥𝕪 𝕥𝕠 𝕜𝕖𝕖𝕡 𝕒𝕨𝕒𝕪 𝕦𝕟𝕨𝕒𝕟𝕥𝕖𝕕 𝕣𝕖𝕥𝕒𝕣𝕕𝕤 𝕗𝕣𝕠𝕞 𝕤𝕡𝕒𝕞𝕞𝕚𝕟𝕘 ℙ𝕄 !!"
+            reply_pop_up_alert = "🔰 𝕋𝕙𝕚𝕤 𝕚𝕤 𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣𝔹𝕠𝕥 ℙ𝕄 𝕊𝕖𝕔𝕦𝕣𝕚𝕥𝕪 𝕥𝕠 𝕜𝕖𝕖𝕡 𝕒𝕨𝕒𝕪 𝕦𝕟𝕨𝕒𝕟𝕥𝕖𝕕 𝕣𝕖𝕥𝕒𝕣𝕕𝕤 𝕗𝕣𝕠𝕞 𝕤𝕡𝕒𝕞𝕞𝕚𝕟𝕘 ℙ𝕄 !!"
         await event.answer(reply_pop_up_alert, cache_time=0, alert=True)
 
 
