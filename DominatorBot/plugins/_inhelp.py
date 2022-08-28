@@ -231,8 +231,8 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚡ Ꝉҽցҽղժąɾվ ȺƑ Ꭰօʍìղąէօɾβօէ⚡**",
                 buttons=[
-                    [Button.url("💥Ꭰօʍìղąէօɾ ɾҽքօʂ💥", "https://github.com/LEGENDXTHANOS/DominatorbOT")],
-                    [Button.url("💥Ꭰօʍìղąէօɾβօէ ហҽէաօɾҟ💥", "https://t.me/DominatorBot_OP")],
+                    [Button.url("💥Ꭰօʍìղąէօɾ ɾҽքօʂ💥", "https://github.com/dominator454/DOMINATORXBOT")],
+                    [Button.url("💥Ꭰօʍìղąէօɾβօէ ហҽէաօɾҟ💥", "https://t.me/dominator_bot_support")],
                 ],
             )
 
@@ -248,15 +248,15 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.article(
                 "@DominatorBot_XD",
-                text="""**ℍ𝕖𝕪! 𝕋𝕙𝕚𝕤 𝕀𝕤 [Ꭰօʍìղąէօɾβօէ](https://t.me/DominatorBot_XD) \n𝕐𝕠𝕦 𝕔𝕒𝕟 𝕜𝕟𝕠𝕨 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕖 𝕗𝕣𝕠𝕞 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜𝕤 𝕘𝕚𝕧𝕖𝕟 𝕓𝕖𝕝𝕠𝕨 👇**""",
+                text="""**ℍ𝕖𝕪! 𝕋𝕙𝕚𝕤 𝕀𝕤 [Ꭰօʍìղąէօɾβօէ](https://t.me/dominator_bot_support) \n𝕐𝕠𝕦 𝕔𝕒𝕟 𝕜𝕟𝕠𝕨 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕖 𝕗𝕣𝕠𝕞 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜𝕤 𝕘𝕚𝕧𝕖𝕟 𝕓𝕖𝕝𝕠𝕨 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 Ꭰօʍìղąէօɾ ↻հąղղҽӀ 🔥", "https://t.me/DominatorBot_OP"),
-                        custom.Button.url("⚡ Ꭰօʍìղąէօɾ Ɠɾօմք ⚡", "https://t.me/DominatorBot_XD"),
+                        custom.Button.url("🔥 Ꭰօʍìղąէօɾ ↻հąղղҽӀ 🔥", "https://t.me/dominator_bot_official"),
+                        custom.Button.url("⚡ Ꭰօʍìղąէօɾ Ɠɾօմք ⚡", "https://t.me/dominator_bot_support"),
                     ],
                     [
-                        custom.Button.url("✨ Ꭰօʍìղąէօɾ ɾҽքօʂ ✨", "https://github.com/LEGENDXTHANOS/DominatorbOT"),
-                        custom.Button.url("🔰 Ꭰօʍìղąէօɾ ɾҽքӀʂ 🔰", "https://replit.com/@LEGEND-LX/PYTHONBOT-4"),
+                        custom.Button.url("✨ Ꭰօʍìղąէօɾ ɾҽքօʂ ✨", "https://github.com/dominator454/DOMINATORXBOT"),
+                        custom.Button.url("🔰 Ꭰօʍìղąէօɾ ɾҽքӀʂ 🔰", "https://replit.com/@dominator454/stringforbot?v=1"),
                     ],
                 ],
                 link_preview=False,
