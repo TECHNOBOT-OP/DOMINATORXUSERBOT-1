@@ -98,7 +98,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             if a:
                 help_pic = a.split(" ")[0]
             else:
-                help_pic = "https://telegra.ph/file/fdcc034f83c1f6372fd4e.jpg"
+                help_pic = "https://telegra.ph/file/93f5cc37e28743aeef809.mp4"
                 
                 help_msg = f"💥💥 **{dominator_mention}**\n\n💥💥Ꭰօʍìղąէօɾ-φӀմցìղʂ : `{len(CMD_HELP)}` \n💥💥Ꭰօʍìղąէօɾ-↻ʍժʂ: `{len(apn)}`\n💥💥Ꭰօʍìղąէօɾ-φąցҽʂ: 1/{veriler[0]}"
                 
