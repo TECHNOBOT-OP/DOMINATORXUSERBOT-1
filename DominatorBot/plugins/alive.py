@@ -23,7 +23,7 @@ ALIVE_TEMP = """
 ┣─ <b>♦️βօէ φìղց ┣</b> <i>{}</i>
 ╚════✣✤༻⋇༺✤✣════╝
 ┏━━━━━(φօաҽɾƑմӀӀ=𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗)━━━━━┓
-┣─<b><i>💥💥💥 <a href='https://t.me/DominatorBot_XD'>[♦️ටղƑìɾҽ-𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗♦️]</a> 💥💥💥</i></b>
+┣─<b><i>💥💥💥 <a href='https://t.me/UltronBot_xD'>[♦️ටղƑìɾҽ-𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗♦️]</a> 💥💥💥</i></b>
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 """
 
@@ -53,7 +53,7 @@ async def up(event):
                 pic_list.append(c)
         PIC = random.choice(pic_list)
     else:
-        PIC = "https://telegra.ph/file/fdcc034f83c1f6372fd4e.jpg"
+        PIC = "https://telegra.ph/file/93f5cc37e28743aeef809.mp4"
     end = datetime.datetime.now()
     ling = (end - start).microseconds / 1000
     omk = ALIVE_TEMP.format(ForGo10God, DOMINATOR_USER, tel_ver, dominator_ver, is_sudo, uptime, ling)
