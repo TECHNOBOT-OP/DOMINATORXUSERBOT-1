@@ -43,8 +43,8 @@ class Config(object):
         LOGGER_ID = int(LOGGER_ID)
     MAX_MESSAGE_SIZE_LIMIT = 4095
     MAX_SPAM = int(os.environ.get("MAX_SPAM", 3))
-    MY_CHANNEL = os.environ.get("YOUR_CHANNEL", "UltronBot_xD")
-    MY_GROUP = os.environ.get("YOUR_GROUP", "UltronBot_OP")
+    MY_CHANNEL = os.environ.get("YOUR_CHANNEL", "dominator_bot_official")
+    MY_GROUP = os.environ.get("YOUR_GROUP", "dominator_bot_support")
     OCR_API = os.environ.get("OCR_API", None)
     PLUGIN_CHANNEL = os.environ.get("PLUGIN_CHANNEL", None)
     if PLUGIN_CHANNEL:
