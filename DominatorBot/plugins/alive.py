@@ -42,7 +42,7 @@ async def up(event):
     cid = await client_id(event)
     ForGo10God, DOMINATOR_USER, dominator_mention = cid[0], cid[1], cid[2]
     start = datetime.datetime.now()
-    dominator = await eor(event, "`ԱӀէɾօղβօէ įʂ ටղƑìɾҽ....`")
+    dominator = await eor(event, "`Ꭰօʍìղąէօɾβօէ įʂ ටղƑìɾҽ....`")
     uptime = await get_time((time.time() - StartTime))
     a = gvarstat("ALIVE_PIC")
     pic_list = []
