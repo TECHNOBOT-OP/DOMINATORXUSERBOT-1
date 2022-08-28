@@ -33,10 +33,10 @@ async def kk(event):
 
 <b><i>HELP:</b></i> <i>If you want to know the commands for a plugin, do “ .plinfo <plugin name> ”
 
-<b><a href='https://t.me/DominatorBot_XD'>@DominatorBot_XD</a></b>
+<b><a href='https://t.me/dominator_bot_official'>@dominator_bot_official</a></b>
 """
     dominator = await telegraph_paste("All available plugins in Ꭰօʍìղąէօɾβօէ Ɠɾօմք", OUTPUT)
-    await eor(event, f"[All available plugins in ԱӀէɾօղβօէ]({dominator})", link_preview=False)
+    await eor(event, f"[All available plugins in Ꭰօʍìղąէօɾβօէ]({dominator})", link_preview=False)
 
 
 @dominator_cmd(pattern="send ([\s\S]*)")
