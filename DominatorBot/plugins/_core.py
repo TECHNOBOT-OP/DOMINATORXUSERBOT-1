@@ -27,7 +27,7 @@ async def kk(event):
     _o = o.split("\n")
     o = "\n".join(_o)
     OUTPUT = f"""
-<h1>List of Plugins in ԱӀէɾօղβօէ :</h1>
+<h1>List of Plugins in Ꭰօʍìղąէօɾβօէ :</h1>
 
 <code>{o}</code>
 
@@ -35,7 +35,7 @@ async def kk(event):
 
 <b><a href='https://t.me/DominatorBot_XD'>@DominatorBot_XD</a></b>
 """
-    dominator = await telegraph_paste("All available plugins in ԱӀէɾօղβօէ Ɠɾօմք", OUTPUT)
+    dominator = await telegraph_paste("All available plugins in Ꭰօʍìղąէօɾβօէ Ɠɾօմք", OUTPUT)
     await eor(event, f"[All available plugins in ԱӀէɾօղβօէ]({dominator})", link_preview=False)
 
 
@@ -46,7 +46,7 @@ async def send(event):
     message_id = event.reply_to_msg_id or event.message.id
     thumb = dominator_logo
     input_str = event.pattern_match.group(1)
-    omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {dominator_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ ԱӀէɾօղβօէ ]({chnl_link})** ⚡"
+    omk = f"**• Plugin name ≈** `{input_str}`\n**• Uploaded by ≈** {dominator_mention}\n\n⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ Ꭰօʍìղąէօɾβօէ ]({chnl_link})** ⚡"
     the_plugin_file = "./DominatorBot/plugins/{}.py".format(input_str.lower())
     if os.path.exists(the_plugin_file):
         await event.client.send_file(
@@ -103,7 +103,7 @@ async def install(event):
                             a = "__Installing...__"
                             b = 1
                         await dominator.edit(a)
-                    return await dominator.edit(f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {dominator_mention}\n\n{string}\n\n        ⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt]({chnl_link})** ⚡", link_preview=False)
+                    return await dominator.edit(f"✅ **Installed module** :- `{shortname}` \n✨ BY :- {dominator_mention}\n\n{string}\n\n        ⚡ **[ʟɛɢɛռɖaʀʏ ᴀғ Ꭰօʍìղąէօɾɮօt]({chnl_link})** ⚡", link_preview=False)
                 return await dominator.edit(f"Installed module `{os.path.basename(downloaded_file_name)}`")
             else:
                 os.remove(downloaded_file_name)
@@ -158,9 +158,9 @@ async def load(event):
         )
 
 CmdHelp("core").add_command(
-  "install", "<reply to a .py file>", "Installs the replied python file if suitable to Hêllẞø†'s codes.`\n**🚩 Flags :** `-f"
+  "install", "<reply to a .py file>", "Installs the replied python file if suitable to Ꭰօʍìղąէօɾẞø†'s codes.`\n**🚩 Flags :** `-f"
 ).add_command(
-  "uninstall", "<plugin name>", "Uninstalls the given plugin from Hêllẞø†. To get that again do .restart", "uninstall alive"
+  "uninstall", "<plugin name>", "Uninstalls the given plugin from Ꭰօʍìղąէօɾlẞø†. To get that again do .restart", "uninstall alive"
 ).add_command(
   "load", "<plugin name>", "Loades the unloaded plugin to your userbot", "load alive"
 ).add_command(
