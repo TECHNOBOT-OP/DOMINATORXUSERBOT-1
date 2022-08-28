@@ -37,16 +37,16 @@ else:
     abuse_m ="Disabled"
 
 
-my_channel = Config.MY_CHANNEL or "@DominatorBot_OP"
-my_group = Config.MY_GROUP or "@DominatorBot_XD"
+my_channel = Config.MY_CHANNEL or "@dominator_bot_official"
+my_group = Config.MY_GROUP or "@dominator_bot_support"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/DominatorBot_XD"
-dominator_channel = f"[✨ԱᎠօʍìղąէօɾβօէ✨]({chnl_link})"
-grp_link = "https://t.me/DominatorBot_Chat"
+chnl_link = "https://t.me/dominator_bot_official"
+dominator_channel = f"[✨Ꭰօʍìղąէօɾβօէ✨]({chnl_link})"
+grp_link = "https://t.me/dominator_bot_support"
 dominator_grp = f"[✨Ꭰօʍìղąէօɾβօէ Ɠɾօմք✨]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
