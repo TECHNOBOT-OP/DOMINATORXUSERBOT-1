@@ -6,7 +6,7 @@ from . import dominator_mention, eor, dominator
 menu_category = "fun"
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="ded ([\s\S]*)",
     command=("ded", menu_category),
     info={
@@ -38,7 +38,7 @@ async def ded(event):
         return await eor(event, "Give me some text")
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="killer ([\s\S]*)",
     command=("killer", menu_category),
     info={
@@ -353,7 +353,7 @@ XYX = (
 )
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="homer$",
     command=("homer", menu_category),
     info={
@@ -366,7 +366,7 @@ async def bluedevilmonster(homer):
     await eor(homer, XYX)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="elephant$",
     command=("elephant", menu_category),
     info={
@@ -379,7 +379,7 @@ async def bluedmonster(elephant):
     await eor(elephant, XZ)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="monster$",
     command=("monster", menu_category),
     info={
@@ -392,7 +392,7 @@ async def bluilmonster(monster):
     await eor(monster, A)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="pig$",
     command=("pig", menu_category),
     info={
@@ -405,7 +405,7 @@ async def bevilpig(pig):
     await eor(pig, B)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="gun$",
     command=("gun", menu_category),
     info={
@@ -418,7 +418,7 @@ async def blueilgun(gun):
     await eor(gun, D)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="dog$",
     command=("dog", menu_category),
     info={
@@ -431,7 +431,7 @@ async def blueldog(dog):
     await eor(dog, E)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="hello$",
     command=("hello", menu_category),
     info={
@@ -470,7 +470,7 @@ async def viello(event):
         await event.delete()
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="hmf$",
     command=("hmf", menu_category),
     info={
@@ -483,7 +483,7 @@ async def blueilhmf(hmf):
     await eor(hmf, G)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="couple$",
     command=("couple", menu_category),
     info={
@@ -496,7 +496,7 @@ async def bluedecouple(couple):
     await eor(couple, H)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="sup$",
     command=("sup", menu_category),
     info={
@@ -509,7 +509,7 @@ async def bluedevilreme(supreme):
     await eor(supreme, I)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="india$",
     command=("india", menu_category),
     info={
@@ -522,7 +522,7 @@ async def bluedindia(india):
     await eor(india, J)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="wc$",
     command=("wc", menu_category),
     info={
@@ -535,7 +535,7 @@ async def bdevilwelcome(welcome):
     await eor(welcome, K)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="snk$",
     command=("snk", menu_category),
     info={
@@ -548,7 +548,7 @@ async def bluvilsnake(snake):
     await eor(snake, L)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="carry$",
     command=("carry", menu_category),
     info={
@@ -567,7 +567,7 @@ async def lnd(event):
         return await eod(event, "Give Me Some Text")
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="dead$",
     command=("dead", menu_category),
     info={
@@ -602,7 +602,7 @@ async def lon(frog):
         await eor(frog, "Give me Some Text")
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="shitos$",
     command=("shitos", menu_category),
     info={
@@ -615,7 +615,7 @@ async def blueilshitos(shitos):
     await eor(shitos, P)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="dislike$",
     command=("dislike", menu_category),
     info={
@@ -628,7 +628,7 @@ async def bluslike(dislike):
     await eor(dislike, R)
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="sthink$",
     command=("sthink", menu_category),
     info={
@@ -662,7 +662,7 @@ async def gend(think):
         return await eor(think, "Give Me Some Text")
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="frog$",
     command=("frog", menu_category),
     info={
@@ -696,7 +696,7 @@ async def lj(frogsay):
         return await eor(frogsay, "Give Me Some Text")
 
 
-@dominator.dominator_cmd(
+@dominator_cmd(
     pattern="bye$",
     command=("bye", menu_category),
     info={
