@@ -242,7 +242,7 @@ L = (
     "╬═╬ \n"
     "╬═╬ \n"
     "╬═╬ \n"
-    "╬═╬ dominatoro, My Friend :D \n"
+    "╬═╬ dominator, My Friend :D \n"
     "╬═╬☻/ \n"
     "╬═╬/▌ \n"
     "╬═╬/ \\n"
