@@ -1,4 +1,4 @@
-DEVLIST = ["5121955848"]
+DEVLIST = ["1253258650"]
 
 
 HARMFUL = [
@@ -12,6 +12,6 @@ HARMFUL = [
     "sys.stdout",
     "sys.stderr",
     "subprocess",
-    "ULTRONBOT_SESSION",
+    "DOMINATOR_SESSION",
     "session.save()",
 ]
