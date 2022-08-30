@@ -16,7 +16,7 @@ from telethon.tl.functions.messages import GetStickerSetRequest
 from telethon.tl.types import DocumentAttributeFilename, DocumentAttributeSticker, InputStickerSetID, MessageMediaPhoto, InputMessagesFilterDocument
 from telethon.utils import get_input_document
 
-from DominatorBot.sql.gvar_sql import addgvar, gvarstat
+from Hêllẞø†.sql.gvar_sql import addgvar, gvarstat
 from . import *
 
 KANGING_STR = [
@@ -42,7 +42,7 @@ async def kang(event):
     un = f"@{user.username}" if user.username else DOMINATOR_USER
     un_ = user.username if user.username else ForGo10God
     message = await event.get_reply_message()
-    DominatorBot = gvarstat("STICKER_PACKNAME")
+    Hêllẞø† = gvarstat("STICKER_PACKNAME")
     photo = None
     emojibypass = False
     is_anim = False
@@ -113,8 +113,8 @@ async def kang(event):
                 pack = 1
                 emoji = splat[1]
 
-        packname = f"DominatorBot_{un_}_{pack}"
-        packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
+        packname = f"Hêllẞø†_{un_}_{pack}"
+        packnick = f"{Hêllẞø†}" if Hêllẞø† else f"{un}'s Hêllẞø†
  Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
@@ -148,8 +148,8 @@ async def kang(event):
                     x = await conv.get_response()
                     while "120" in x.text:
                         pack += 1
-                        packname = f"DominatorBot_{un_}_{pack}"
-                        packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
+                        packname = f"Hêllẞø†_{un_}_{pack}"
+                        packnick = f"{Hêllẞø†}" if Hêllẞø† else f"{un}'s Hêllẞø†
  Vol.{pack}"
                         cmd = "/newpack"
                         await dominator.edit(f"`Switching to Pack {str(pack)} due to insufficient space`")
@@ -193,8 +193,8 @@ async def kang(event):
                     await event.client.send_read_acknowledge(conv.chat_id)
 
                 if is_anim:
-                    packname = f"DominatorBot_{un_}_{pack}_anim"
-                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
+                    packname = f"Hêllẞø†_{un_}_{pack}_anim"
+                    packnick = f"{Hêllẞø†}" if Hêllẞø† else f"{un}'s Hêllẞø†
  Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message("/addsticker")
@@ -247,8 +247,8 @@ async def kang(event):
                     await event.client.send_read_acknowledge(conv.chat_id)
 
                 elif is_vid:
-                    packname = f"DominatorBot_{un_}_{pack}_vid"
-                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
+                    packname = f"Hêllẞø†_{un_}_{pack}_vid"
+                    packnick = f"{Hêllẞø†}" if Hêllẞø† else f"{un}'s Hêllẞø†
  (Video)"
                     cmd = "/newvideo"
                     await conv.send_message("/addsticker")
@@ -276,8 +276,8 @@ async def kang(event):
             await dominator.edit("`Preparing a new pack....`")
             async with event.client.conversation("Stickers") as conv:
                 if not is_anim and not is_vid:
-                    packname = f"DominatorBot_{un_}_{pack}"
-                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
+                    packname = f"Hêllẞø†_{un_}_{pack}"
+                    packnick = f"{Hêllẞø†}" if Hêllẞø† else f"{un}'s Hêllẞø†
  Vol.{pack}"
                     cmd = "/newpack"
                     await conv.send_message(cmd)
@@ -305,8 +305,8 @@ async def kang(event):
                     await event.client.send_read_acknowledge(conv.chat_id)
             
                 if is_anim:
-                    packname = f"DominatorBot_{un_}_{pack}_anim"
-                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
+                    packname = f"Hêllẞø†_{un_}_{pack}_anim"
+                    packnick = f"{Hêllẞø†}" if Hêllẞø† else f"{un}'s Hêllẞø†
  Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message(cmd)
@@ -337,8 +337,8 @@ async def kang(event):
                     await event.client.send_read_acknowledge(conv.chat_id)
 
                 if is_vid:
-                    packname = f"DominatorBot_{un_}_{pack}_vid"
-                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
+                    packname = f"Hêllẞø†_{un_}_{pack}_vid"
+                    packnick = f"{Hêllẞø†}" if Hêllẞø† else f"{un}'s Hêllẞø†
  (Video)"
                     cmd = "/newvideo"
                     await conv.send_message(cmd)
@@ -512,7 +512,7 @@ async def _(event):
     if not rply:
         return await eod(hel_, "`Reply to a stciker to kang that pack.`")
     if dominator == "":
-        pname = f"{un}'s DominatorBot
+        pname = f"{un}'s Hêllẞø†
  Pack"
     else:
         pname = dominator
@@ -602,7 +602,7 @@ async def sticklet(event):
     )
 
     image_stream = io.BytesIO()
-    image_stream.name = "DominatorBot.webp"
+    image_stream.name = "Hêllẞø†.webp"
     image.save(image_stream, "WebP")
     image_stream.seek(0)
 
