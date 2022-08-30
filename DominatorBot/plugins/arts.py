@@ -1,9 +1,7 @@
 import asyncio
+from collections import deque
 
-from ..helpers.utils import reply_id
-from . import dominator_mention, eor, dominator
-
-menu_category = "fun"
+from . import *
 
 
 @dominator_cmd(
