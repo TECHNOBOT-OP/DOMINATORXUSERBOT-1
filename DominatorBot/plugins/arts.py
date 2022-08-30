@@ -485,9 +485,9 @@ async def _(dog):
     await eor(dog, J)
 
 
-@dominator_cmd(pattern="dominatoro$")
-async def _(dominatoro):
-    await eor(dominatoro, K)
+@dominator_cmd(pattern="hello$")
+async def _(hello):
+    await eor(hello, K)
 
 
 @dominator_cmd(pattern="hmf$")
@@ -546,7 +546,7 @@ CmdHelp("arts").add_command(
 ).add_command(
   'dog', None, 'Use and see'
 ).add_command(
-  'dominatoro', None, 'Use and see'
+  'hello', None, 'Use and see'
 ).add_command(
   'hmf', None, 'Use and see'
 ).add_command(
