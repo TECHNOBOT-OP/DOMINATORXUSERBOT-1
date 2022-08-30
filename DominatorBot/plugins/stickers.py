@@ -114,7 +114,7 @@ async def kang(event):
                 emoji = splat[1]
 
         packname = f"DominatorBot_{un_}_{pack}"
-        packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s Ꭰօʍìղąէօɾ βօէ
+        packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
  Vol.{pack}"
         cmd = "/newpack"
         file = io.BytesIO()
@@ -149,7 +149,7 @@ async def kang(event):
                     while "120" in x.text:
                         pack += 1
                         packname = f"DominatorBot_{un_}_{pack}"
-                        packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s Ꭰօʍìղąէօɾ βօէ
+                        packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
  Vol.{pack}"
                         cmd = "/newpack"
                         await dominator.edit(f"`Switching to Pack {str(pack)} due to insufficient space`")
@@ -194,7 +194,7 @@ async def kang(event):
 
                 if is_anim:
                     packname = f"DominatorBot_{un_}_{pack}_anim"
-                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s Ꭰօʍìղąէօɾ βօէ
+                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
  Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message("/addsticker")
@@ -248,7 +248,7 @@ async def kang(event):
 
                 elif is_vid:
                     packname = f"DominatorBot_{un_}_{pack}_vid"
-                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s Ꭰօʍìղąէօɾ βօէ
+                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
  (Video)"
                     cmd = "/newvideo"
                     await conv.send_message("/addsticker")
@@ -277,7 +277,7 @@ async def kang(event):
             async with event.client.conversation("Stickers") as conv:
                 if not is_anim and not is_vid:
                     packname = f"DominatorBot_{un_}_{pack}"
-                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s Ꭰօʍìղąէօɾ βօէ
+                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
  Vol.{pack}"
                     cmd = "/newpack"
                     await conv.send_message(cmd)
@@ -306,7 +306,7 @@ async def kang(event):
             
                 if is_anim:
                     packname = f"DominatorBot_{un_}_{pack}_anim"
-                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s Ꭰօʍìղąէօɾ βօէ
+                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
  Vol.{pack} (Animated)"
                     cmd = "/newanimated"
                     await conv.send_message(cmd)
@@ -338,7 +338,7 @@ async def kang(event):
 
                 if is_vid:
                     packname = f"DominatorBot_{un_}_{pack}_vid"
-                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s Ꭰօʍìղąէօɾ βօէ
+                    packnick = f"{DominatorBot}" if DominatorBot else f"{un}'s DominatorBot
  (Video)"
                     cmd = "/newvideo"
                     await conv.send_message(cmd)
@@ -512,7 +512,7 @@ async def _(event):
     if not rply:
         return await eod(hel_, "`Reply to a stciker to kang that pack.`")
     if dominator == "":
-        pname = f"{un}'s Ꭰօʍìղąէօɾ βօէ
+        pname = f"{un}'s DominatorBot
  Pack"
     else:
         pname = dominator
