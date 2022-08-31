@@ -33,4 +33,4 @@ async def viello(event):
         ok4 = await event.client.edit_message(event.chat_id, ok3, file=K_PIC)
         await asyncio.sleep(5)
         ok5 = await event.client.edit_message(event.chat_id, ok4, file=HELL_PIC)
-        await event.delete()
+        await event.delete(0)
