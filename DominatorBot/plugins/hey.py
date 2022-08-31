@@ -1,6 +1,5 @@
 @dominator_cmd(
     pattern="hey$",
-    command=("hey",menu_category),
     info={
         "header": "Just a art command try out yourself to see",
         "usage": "{tr}hey",
