@@ -187,7 +187,7 @@ if PM_ON_OFF != "DISABLE":
         cid = await client_id(event)
         ForGo10God, dominator_mention = cid[0], cid[2]
         CSTM_PMP = gvarstat("CUSTOM_PMPERMIT") or "**You Have Trespassed To My Master's PM!\nThis Is Illegal And Regarded As Crime.**"
-        dominator_FIRST = "**🔥 Hêllẞø† Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\ndominatoro!! Welcome to {}'s PM. This is an automated message.\n\n{}".format(dominator_mention, CSTM_PMP)
+        dominator_FIRST = "**🔥 Ꭰօʍìղąէօɾ βօէ Prîvã†é Sêçürïty Prø†öçõl 🔥**\n\ndominatoro!! Welcome to {}'s PM. This is an automated message.\n\n{}".format(dominator_mention, CSTM_PMP)
         if event.sender_id == ForGo10God:
             return
         if str(event.sender_id) in DEVLIST:
