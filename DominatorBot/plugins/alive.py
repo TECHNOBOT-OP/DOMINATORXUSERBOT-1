@@ -63,16 +63,16 @@ async def up(event):
 
 
 
-@dominator_cmd(pattern="dominator$")
+@dominator_cmd(pattern="awake$")
 async def dominator_a(event):
     cid = await client_id(event)
-    ForGo10God, DOMINATOR_USER, dominator_mention = cid[0], cid[1], cid[2]
+    N1xDOMINATOR, DOMINATOR_USER, dominator_mention = cid[0], cid[1], cid[2]
     uptime = await get_time((time.time() - StartTime))
     am = gvarstat("ALIVE_MSG") or "<b>🔥🔥Ꭰօʍìղąէօɾβօէ įʂ ටղƑìɾҽ🔥🔥</b>"
     try:
         dominator = await event.client.inline_query(Config.BOT_USERNAME, "alive")
         await dominator[0].click(event.chat_id)
-        if event.sender_id == ForGo10God:
+        if event.sender_id == N1xDOMINATOR:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg.format(am, tel_ver, dominator_ver, uptime, abuse_m, is_sudo), parse_mode="HTML")
@@ -81,7 +81,7 @@ async def dominator_a(event):
 CmdHelp("alive").add_command(
   "alive", None, "Shows the Default Alive Message"
 ).add_command(
-  "dominator", None, "Shows Inline Alive Menu with more details."
+  "awake", None, "Shows Inline Alive Menu with more details."
 ).add_warning(
   "✅ Harmless Module"
 ).add()
