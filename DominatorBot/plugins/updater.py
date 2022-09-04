@@ -90,7 +90,7 @@ async def update(event, repo, ups_rem, ac_br):
     except GitCommandError:
         repo.git.reset("--hard", "FETCH_HEAD")
     await update_requirements()
-    await eor(event, "✅ Successfully updated Dominator Bot!\n\nBot is restarting please wait for a minute.")
+    await eor(event, "✅ Successfully updated Hêllẞø†!\n\nBot is restarting please wait for a minute.")
     args = [sys.executable, "-m", "DominatorBot"]
     os.execle(sys.executable, *args, os.environ)
     return
@@ -154,11 +154,11 @@ async def upstream(event):
     if conf == "" and not force_update:
         await print_changelogs(event, ac_br, changelog)
         await event.delete()
-        return await event.respond(f"🌚 Do `{hl}update build` to update your **DominatorBot** !!")
+        return await event.respond(f"🌚 Do `{hl}update build` to update your **Hêllẞø†** !!")
 
     if force_update:
         await event.edit(
-            "`Force-Updating Dominator bot. Please wait...`"
+            "`Force-Updating Hêllẞø†. Please wait...`"
         )
     if conf == "now":
         await event.edit("`Update In Progress! Please Wait....`")
@@ -187,7 +187,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             return repo.__del__()
         _version, _release, _branch, _author, _auturl = await dominator_info(DominatorBot_info)
-        await event.edit(f"<b><i>DominatorBot Docker Build In Progress !!!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
+        await event.edit(f"<b><i>Hêllẞø† Docker Build In Progress !!!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
         ups_rem.fetch(ac_br)
         repo.git.reset("--hard", "FETCH_HEAD")
         heroku_git_url = heroku_app.git_url.replace(
@@ -210,7 +210,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
             )
             await asyncio.sleep(5)
             return await event.delete()
-        await event.edit(f"**Your DominatorBot Is UpToDate**\n\n**Version :**  __{dominator_ver}__\n**Oɯɳҽɾ :**  {dominator_mention}")
+        await event.edit(f"**Your Hêllẞø† Is UpToDate**\n\n**Version :**  __{dominator_ver}__\n**Oɯɳҽɾ :**  {dominator_mention}")
     else:
         await event.edit("**Please set up**  `HEROKU_API_KEY`  **from heroku to update!**")
     return
@@ -219,7 +219,7 @@ async def deploy(event, repo, ups_rem, ac_br, txt):
 @dominator_cmd(pattern="update build$")
 async def upstream(event):
     event = await eor(event, "`Hard-Update In Progress... \nPlease wait until docker build is finished...`")
-    off_repo = "https://github.com/dominator454/DOMINATORXUSERBOT"
+    off_repo = "https://github.com/The-DominatorBot/DominatorBot"
     os.chdir("/app")
     git_dominator = f"rm -rf .git"
     try:
@@ -250,18 +250,18 @@ async def upstream(event):
     ups_rem = repo.remote("upstream")
     ups_rem.fetch(ac_br)
     _version, _release, _branch, _author, _auturl = await dominator_info(DominatorBot_info)
-    await event.edit(f"<b><i>DominatorBot Docker Build In Progress !!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
+    await event.edit(f"<b><i>Hêllẞø† Docker Build In Progress !!</b></i> \n\n<b><i><u>Update Information :</b></i></u> \n<b>• Branch :</b> {_branch} \n<b>• Release Date :</b> {_release} \n<b>• Version :</b> {_version} \n<b>• Author :</b> <a href='{_auturl}'>{_author}</a>", link_preview=False, parse_mode="HTML")
     await deploy(event, repo, ups_rem, ac_br, txt)
 
 
 CmdHelp("update").add_command(
   "update", None, "Checks if any new update is available."
 ).add_command(
-  "update now", None, "Soft-Update Your DominatorBot. Basically if you restart dyno it will go back to previous deploy."
+  "update now", None, "Soft-Update Your Hêllẞø†. Basically if you restart dyno it will go back to previous deploy."
 ).add_command(
-  "update build", None, "Hard-Update Your Dominatorbot. This won't take you back to your previous deploy. This will be triggered even if there is no changelog."
+  "update build", None, "Hard-Update Your Hêllẞø†. This won't take you back to your previous deploy. This will be triggered even if there is no changelog."
 ).add_info(
-  "DominatorBot Updater."
+  "Hêllẞø† Updater."
 ).add_warning(
   "✅ Harmless Module."
 ).add()
