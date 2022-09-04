@@ -1,4 +1,4 @@
-import datetime
+3 import datetime
 import random
 import time
 
@@ -62,7 +62,7 @@ async def up(event):
 
 
 
-@dominator_cmd(pattern="awake$")
+@dominator_cmd(pattern="dominator$")
 async def dominator_a(event):
     cid = await client_id(event)
     N1xDOMINATOR, DOMINATOR_USER, dominator_mention = cid[0], cid[1], cid[2]
@@ -80,7 +80,7 @@ async def dominator_a(event):
 CmdHelp("alive").add_command(
   "alive", None, "Shows the Default Alive Message"
 ).add_command(
-  "awake", None, "Shows Inline Alive Menu with more details."
+  "dominator", None, "Shows Inline Alive Menu with more details."
 ).add_warning(
   "✅ Harmless Module"
 ).add()
