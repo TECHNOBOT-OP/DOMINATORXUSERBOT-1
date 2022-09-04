@@ -12,7 +12,6 @@ from telethon.tl.functions.channels import LeaveChannelRequest
 from ..sql.gvar_sql import gvarstat
 from . import *
 
-ping_txt ="""https://telegra.ph/file/fdcc034f83c1f6372fd4e.jpg"""
 ping_txt = """
 <b><i>╰•★★  ℘ơŋɠ ★★•╯</b></i>
 
@@ -167,7 +166,7 @@ CmdHelp("bot").add_command(
 ).add_command(
     "kickme", None, "Kicks Yourself from the group."
 ).add_command(
-    "ping", None, "Checks the ping speed of your DominatorBot"
+    "ping", None, "Checks the ping speed of your Hêllẞø†"
 ).add_command(
     "schd", "<secs> - <message>", "Sends your message in given secs", "schd 10 - dominatoro"
 ).add_command(
