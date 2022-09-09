@@ -242,7 +242,7 @@ L = (
     "╬═╬ \n"
     "╬═╬ \n"
     "╬═╬ \n"
-    "╬═╬ dominatoro, My Friend :D \n"
+    "╬═╬ Dominator, My Friend :D \n"
     "╬═╬☻/ \n"
     "╬═╬/▌ \n"
     "╬═╬/ \\n"
@@ -485,8 +485,8 @@ async def _(dog):
     await eor(dog, J)
 
 
-@dominator_cmd(pattern="dominatoro$")
-async def _(dominatoro):
+@dominator_cmd(pattern="hello")
+async def _(hello):
     await eor(dominatoro, K)
 
 
