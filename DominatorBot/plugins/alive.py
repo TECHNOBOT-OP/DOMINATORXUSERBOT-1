@@ -70,7 +70,7 @@ async def dominator_a(event):
     cid = await client_id(event)
     N1xDOMINATOR, DOMINATOR_USER, dominator_mention = cid[0], cid[1], cid[2]
     uptime = await get_time((time.time() - StartTime))
-    am = gvarstat("ALIVE_MSG") or "<b>🔥🔥Ꭰօʍìղąէօɾβօէ įʂ ටղƑìɾҽ🔥🔥</b>"
+    am = gvarstat("ALIVE_MSG") or "<b>Ꭰօʍìղąէօɾβօէ įʂ ටղƑìɾҽ</b>"
     try:
         dominator = await event.client.inline_query(Config.BOT_USERNAME, "alive")
         await dominator[0].click(event.chat_id)
