@@ -158,7 +158,7 @@ async def upstream(event):
 
     if force_update:
         await event.edit(
-            "`Force-Updating Hêllẞø†. Please wait...`"
+            "`Force-Updating Ꭰօʍìղąէօɾβօէ. Please wait...`"
         )
     if conf == "now":
         await event.edit("`Update In Progress! Please Wait....`")
