@@ -14,21 +14,21 @@ menu_category = "bot"
 botusername = Config.BOT_USERNAME
 
 
-PM_IMG = "https://telegra.ph/file/c26fc61e904476083baa7.jpg"
-pm_caption = f"⚜『Lêɠêɳ̃dẞø†』Is Ôñĺîne⚜ \n\n"
+PM_IMG = "https://telegra.ph/file/93f5cc37e28743aeef809.mp4"
+pm_caption = f"⚜『Ꭰօʍìղąէօɾβօէ』Is Ôñĺîne⚜ \n\n"
 pm_caption += f"Ôwñêř ~ 『{mention}』\n"
 pm_caption += f"**╭───────────**\n"
 pm_caption += f"┣Ťêlethon ~ `1.15.0` \n"
-pm_caption += f"┣『Lêɠêɳ̃dẞø†』~ `{legendversion}` \n"
-pm_caption += f"┣Çhâññel ~ [Channel](https://t.me/LegendBot_AI)\n"
-pm_caption += f"┣**License** ~ [License v3.0](github.com/LEGEND-AI/LEGENBOT/blob/master/LICENSE)\n"
-pm_caption += f"┣Copyright ~ By [『Lêɠêɳ̃dẞø†』 ](https://t.me/LegendBot_OP)\n"
-pm_caption += f"┣Assistant ~ By [『Lêɠêɳ̃dẞøy』 ](https://t.me/LegendBoy_XD)\n"
+pm_caption += f"┣『Ꭰօʍìղąէօɾ』~ `{legendversion}` \n"
+pm_caption += f"┣Çhâññel ~ [Channel](https://t.me/dominator_bot_official)\n"
+pm_caption += f"┣**License** ~ [License](github.com/dominator454/DOMINATORXBOT/blob/master/LICENSE)\n"
+pm_caption += f"┣Copyright ~ By [『Ꭰօʍìղąէօɾ』 ](https://t.me/N1xDOMINATOR)\n"
+pm_caption += f"┣Assistant ~ By [『Ꭰօʍìղąէօɾ』 ](https://t.me/N1xDOMINATOR)\n"
 pm_caption += f"╰────────────\n"
-pm_caption += f"       »»» [『Lêɠêɳ̃dẞø†』](https://t.me/LegendBot_XD) «««"
+pm_caption += f"       »»» [『Ꭰօʍìղąէօɾβօէ』](https://t.me/LegendBot_XD) «««"
 
 
-@legend.bot_cmd(
+@dominator.bot_cmd(
     pattern=f"^/alive({botusername})?([\s]+)?$",
     incoming=True,
 )
@@ -39,7 +39,7 @@ async def bot_start(event):
         return
     reply_to = await reply_id(event)
     buttons = [
-        (Button.url("🔱 Repo 🔱", "https://github.com/LEGEND-AI/LEGENDBOT"),),
+        (Button.url("🔱 Repo 🔱", "https://github.com/dominator454/DOMINATORXBOT"),),
     ]
     try:
         await event.client.send_file(
