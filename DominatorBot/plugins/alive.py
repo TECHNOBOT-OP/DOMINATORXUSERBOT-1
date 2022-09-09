@@ -74,7 +74,7 @@ async def dominator_a(event):
     try:
         dominator = await event.client.inline_query(Config.BOT_USERNAME, "alive")
         await dominator[0].click(event.chat_id)
-        if event.sender_id == N1xDOMINATOR:
+        if event.sender_id == ForGo10God:
             await event.delete()
     except (noin, dedbot):
         await eor(event, msg.format(am, tel_ver, dominator_ver, uptime, abuse_m, is_sudo), parse_mode="HTML")
