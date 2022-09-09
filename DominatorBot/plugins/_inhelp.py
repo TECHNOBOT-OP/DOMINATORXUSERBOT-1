@@ -31,7 +31,7 @@ if mybot.startswith("@"):
 else:
     botname = f"@{mybot}"
 LOG_GP = Config.LOGGER_ID
-USER_BOT_WARN_ZERO = "𝔼𝕟𝕠𝕦𝕘𝕙 𝕆𝕗 𝕐𝕠𝕦𝕣 𝔽𝕝𝕠𝕠𝕕𝕚𝕟𝕘 𝕀𝕟 𝕄𝕪 𝕄𝕒𝕤𝕥𝕖𝕣'𝕤 𝕌𝕃𝕋ℝ𝕆ℕℙ𝕄!! \n\n**🚫 𝔹𝕝𝕠𝕔𝕜𝕖𝕕 𝕒𝕟𝕕 ℝ𝕖𝕡𝕠𝕣𝕥𝕖𝕕.**"
+USER_BOT_WARN_ZERO = "𝔼𝕟𝕠𝕦𝕘𝕙 𝕆𝕗 𝕐𝕠𝕦𝕣 𝔽𝕝𝕠𝕠𝕕𝕚𝕟𝕘 𝕀𝕟 𝕄𝕪 𝕄𝕒𝕤𝕥𝕖𝕣'𝕤 ℙ𝕄!! \n\n**🚫 𝔹𝕝𝕠𝕔𝕜𝕖𝕕 𝕒𝕟𝕕 ℝ𝕖𝕡𝕠𝕣𝕥𝕖𝕕.**"
 
 alive_txt = """{}\n
 <b><i>🏅 𝙱𝚘𝚝 𝚂𝚝𝚊𝚝𝚞𝚜 🏅</b></i>
@@ -98,7 +98,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
             if a:
                 help_pic = a.split(" ")[0]
             else:
-                help_pic = "https://telegra.ph/file/193fd25d076d8fa882c58.jpg"
+                help_pic = "https://telegra.ph/file/7f1bcf60ba68451d02d20.mp4"
                 
                 help_msg = f"💥💥 **{dominator_mention}**\n\n💥💥Ꭰօʍìղąէօɾ-φӀմցìղʂ : `{len(CMD_HELP)}` \n💥💥Ꭰօʍìղąէօɾ-↻ʍժʂ: `{len(apn)}`\n💥💥Ꭰօʍìղąէօɾ-φąցҽʂ: 1/{veriler[0]}"
                 
@@ -151,7 +151,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://telegra.ph/file/193fd25d076d8fa882c58.jpg4"
+                PIC = "https://telegra.ph/file/7f1bcf60ba68451d02d20.mp4"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     PIC,
@@ -190,7 +190,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://telegra.ph/file/193fd25d076d8fa882c58.jpg"
+                PIC = "https://telegra.ph/file/7f1bcf60ba68451d02d20.mp4"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     file=PIC,
@@ -232,7 +232,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 text=f"**⚡ Ꝉҽցҽղժąɾվ ȺƑ Ꭰօʍìղąէօɾβօէ⚡**",
                 buttons=[
                     [Button.url("💥 Ꭰօʍìղąէօɾ ɾҽքօʂ 💥", "https://github.com/dominator454/DOMINATORXBOT")],
-                    [Button.url("💥Ꭰօʍìղąէօɾβօէ ហҽէաօɾҟ💥", "https://t.me/DominatorBot_OP")],
+                    [Button.url("💥Ꭰօʍìղąէօɾβօէ ហҽէաօɾҟ💥", "https://t.me/dominator_bot_support")],
                 ],
             )
 
@@ -248,14 +248,14 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
         else:
             result = builder.article(
                 "@DominatorBot_XD",
-                text="""**ℍ𝕖𝕪! 𝕋𝕙𝕚𝕤 𝕀𝕤 [Ꭰօʍìղąէօɾβօէ](https://t.me/DominatorBot_XD) \n𝕐𝕠𝕦 𝕔𝕒𝕟 𝕜𝕟𝕠𝕨 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕖 𝕗𝕣𝕠𝕞 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜𝕤 𝕘𝕚𝕧𝕖𝕟 𝕓𝕖𝕝𝕠𝕨 👇**""",
+                text="""**ℍ𝕖𝕪! 𝕋𝕙𝕚𝕤 𝕀𝕤 [Ꭰօʍìղąէօɾβօէ](https://t.me/dominator_bot_support) \n𝕐𝕠𝕦 𝕔𝕒𝕟 𝕜𝕟𝕠𝕨 𝕞𝕠𝕣𝕖 𝕒𝕓𝕠𝕦𝕥 𝕞𝕖 𝕗𝕣𝕠𝕞 𝕥𝕙𝕖 𝕝𝕚𝕟𝕜𝕤 𝕘𝕚𝕧𝕖𝕟 𝕓𝕖𝕝𝕠𝕨 👇**""",
                 buttons=[
                     [
-                        custom.Button.url("🔥 Ꭰօʍìղąէօɾ ↻հąղղҽӀ 🔥", "https://t.me/DominatorBot_OP"),
-                        custom.Button.url("⚡ Ꭰօʍìղąէօɾ Ɠɾօմք ⚡", "https://t.me/DominatorBot_XD"),
+                        custom.Button.url("🔥 Ꭰօʍìղąէօɾ ↻հąղղҽӀ 🔥", "https://t.me/dominator_bot_official"),
+                        custom.Button.url("⚡ Ꭰօʍìղąէօɾ Ɠɾօմք ⚡", "https://t.me/dominator_bot_support"),
                     ],
                     [
-                        custom.Button.url("✨ Ꭰօʍìղąէօɾ ɾҽքօʂ ✨", "https://github.com/dominator454/DOMINATORXUSERBOT"),
+                        custom.Button.url("✨ Ꭰօʍìղąէօɾ ɾҽքօʂ ✨", "https://github.com/dominator454/DOMINATORXBOT"),
                         custom.Button.url("🔰 Ꭰօʍìղąէօɾ ɾҽքӀʂ 🔰", "https://replit.com/@LEGEND-LX/PYTHONBOT-4"),
                     ],
                 ],
