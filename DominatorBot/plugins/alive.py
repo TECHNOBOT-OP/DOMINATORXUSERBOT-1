@@ -21,6 +21,9 @@ ALIVE_TEMP = """
 ┣─ <b>♦️ ʂմժօ ┣</b> <i>{}</i>
 ┣─ <b>♦️βօէ Աքէìʍҽ ┣</b> <i>{}</i>
 ┣─ <b>♦️βօէ φìղց ┣</b> <i>{}</i>
+┣•➳➠ 𝚂𝚞𝚙𝚙𝚘𝚛𝚝𝚎𝚛:[♦️ටղƑìɾҽ-𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗♦️]
+┣•➳➠ 𝚂𝚞𝚙𝚙𝚘𝚛𝚝𝚎𝚛: [✰ʟᴇɢᴇɴᴅ✰](https://t.me/Pro_LegendHacker)\n"
+┣•➳➠ [🔥𝐑𝐄𝐏𝐎🔥](https://github.com/dominator454/DOMINATORXBOT) 🔹 [📜𝐋𝐢𝐜𝐞𝐧𝐬𝐞📜](https://github.com/dominator454/DOMINATORXBOT/blob/main/LICENSE)"
 ╚════✣✤༻⋇༺✤✣════╝
 ┏━━━━━(φօաҽɾƑմӀӀ=𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗)━━━━━┓
 ┣─<b><i>💥💥💥 <a href='https://t.me/dominator_bot_official'>[♦️ටղƑìɾҽ-𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗♦️]</a> 💥💥💥</i></b>
