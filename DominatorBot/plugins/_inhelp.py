@@ -190,7 +190,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         pic_list.append(c)
                 PIC = random.choice(pic_list)
             else:
-                PIC = "https://telegra.ph/file/adc0be6684586dfeb24df.jpg"
+                PIC = "https://telegra.ph/file/93f5cc37e28743aeef809.mp4"
             if PIC and PIC.endswith((".jpg", ".png")):
                 result = builder.photo(
                     file=PIC,
