@@ -231,7 +231,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                 title="Repository",
                 text=f"**⚡ Ꝉҽցҽղժąɾվ ȺƑ Ꭰօʍìղąէօɾβօէ⚡**",
                 buttons=[
-                    [Button.url("💥 Ꭰօʍìղąէօɾ ɾҽքօʂ 💥", "https://github.com/dominator454/DOMINATORXBOT")],
+                    [Button.url("💥 Ꭰօʍìղąէօɾ ɾҽքօʂ 💥", "https://github.com/DOMINATOR-XD/DOMINATORXBOT")],
                     [Button.url("💥Ꭰօʍìղąէօɾβօէ ហҽէաօɾҟ💥", "https://t.me/dominator_bot_support")],
                 ],
             )
@@ -255,7 +255,7 @@ if Config.BOT_USERNAME is not None and tgbot is not None:
                         custom.Button.url("⚡ Ꭰօʍìղąէօɾ Ɠɾօմք ⚡", "https://t.me/dominator_bot_support"),
                     ],
                     [
-                        custom.Button.url("✨ Ꭰօʍìղąէօɾ ɾҽքօʂ ✨", "https://github.com/dominator454/DOMINATORXBOT"),
+                        custom.Button.url("✨ Ꭰօʍìղąէօɾ ɾҽքօʂ ✨", "https://github.com/DOMINATOR-XD/DOMINATORXBOT"),
                         custom.Button.url("🔰 Ꭰօʍìղąէօɾ ɾҽքӀʂ 🔰", "https://replit.com/@LEGEND-LX/PYTHONBOT-4"),
                     ],
                 ],
