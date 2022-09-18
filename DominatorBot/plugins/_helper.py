@@ -9,7 +9,7 @@ from . import *
 
 msg = f"""
 **⚡ ʟɛɢɛռɖaʀʏ ᴀғ 𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣 ⚡**
-  •        [📑 Repo 📑](https://github.com/dominator454/DOMINATORXBOT)
+  •        [📑 Repo 📑](https://github.com/DOMINATOR-XD/DOMINATORXBOT)
   •        [DominatorBot Network](https://t.me/dominator_bot_support)
   •  ©️ {dominator_channel} ™
 """
