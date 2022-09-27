@@ -1,4 +1,3 @@
-RUK JA KAM CHALL RHA HE VHAI
 
 # Follow this format to make your own plugin for DominatorBot.
 
