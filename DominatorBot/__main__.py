@@ -40,7 +40,6 @@ async def plug_load(path):
             shortname = path1.stem
             if shortname.replace(".py", "") in Config.UNLOAD:
                 os.remove(Path(f"DominatorBot/plugins/{shortname}.py"))
-                os.remove(Path(f"DominatorBot/assistant/{shortname}.py"))
             else:
                 load_module(shortname.replace(".py", ""))      
 
