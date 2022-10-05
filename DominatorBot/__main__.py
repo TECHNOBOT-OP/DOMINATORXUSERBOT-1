@@ -9,7 +9,7 @@ from telethon.utils import get_peer_id
 from DominatorBot import LOGS, bot, tbot
 from DominatorBot.clients.session import Dominator, H2, H3, H4, H5
 from DominatorBot.config import Config
-from DominatorBot.utils import join_it, load_module, logger_check, start_msg, update_sudo, plug_channel
+from DominatorBot.utils import join_it, load_module, logger_check, start_msg, load_plugins, update_sudo, plug_channel
 from DominatorBot.version import __dominator__ as dominatorver
 
 hl = Config.HANDLER
