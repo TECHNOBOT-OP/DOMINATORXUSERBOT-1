@@ -82,5 +82,62 @@ async def join_it(client):
             await client(functions.channels.JoinChannelRequest("@dominator_bot_official"))
         except BaseException:
             pass
+async def load_plugins(folder, extfolder=None):
+    """
+    To load plugins from the mentioned folder
+    """
+    if extfolder:
+        path = f"{extfolder}/*.py"
+        plugin_path = extfolder
+    else:
+        path = f"Dominatorbot/{folder}/*.py"
+        plugin_path = f"Dominatorbot/{folder}"
+    files = glob.glob(path)
+    files.sort()
+    success = 0
+    failure = []
+    for name in files:
+        with open(name) as f:
+            path1 = Path(f.name)
+            shortname = path1.stem
+            pluginname = shortname.replace(".py", "")
+            try:
+                if (pluginname not in Config.NO_LOAD) and (
+                    pluginname not in VPS_NOLOAD
+                ):
+                    flag = True
+                    check = 0
+                    while flag:
+                        try:
+                            load_module(
+                                pluginname,
+                                plugin_path=plugin_path,
+                            )
+                            if shortname in failure:
+                                failure.remove(shortname)
+                            success += 1
+                            break
+                        except ModuleNotFoundError as e:
+                            install_pip(e.name)
+                            check += 1
+                            if shortname not in failure:
+                                failure.append(shortname)
+                            if check > 5:
+                                break
+                else:
+                    os.remove(Path(f"{plugin_path}/{shortname}.py"))
+            except Exception as e:
+                if shortname not in failure:
+                    failure.append(shortname)
+                os.remove(Path(f"{plugin_path}/{shortname}.py"))
+                LOGS.info(
+                    f"unable to load {shortname} because of error {e}\nBase Folder {plugin_path}"
+                )
+    if extfolder:
+        if not failure:
+            failure.append("None")
+        await bot.send_message(
+            BOTLOG_CHATID,
+            f'Your external repo plugins have imported \n**No of imported plugins :** `{success}`\n**Failed plugins to import :** `{", ".join(failure)}`',
 
 # DominatorBot
