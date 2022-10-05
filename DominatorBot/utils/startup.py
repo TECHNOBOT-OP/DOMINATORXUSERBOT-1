@@ -94,8 +94,8 @@ async def load_plugins(folder, extfolder=None):
         path = f"{extfolder}/*.py"
         plugin_path = extfolder
     else:
-        path = f"Dominatorbot/{folder}/*.py"
-        plugin_path = f"Dominatorbot/{folder}"
+        path = f"DominatorBot/{folder}/*.py"
+        plugin_path = f"DominatorBot/{folder}"
     files = glob.glob(path)
     files.sort()
     success = 0
@@ -143,6 +143,6 @@ async def load_plugins(folder, extfolder=None):
         await bot.send_message(
             BOTLOG_CHATID,
             f'Your external repo plugins have imported \n**No of imported plugins :** `{success}`\n**Failed plugins to import :** `{", ".join(failure)}`')
-await load_plugins(folder="Technobot", extfolder=efolder)
+            await load_plugins(folder="DominatorBot", extfolder=efolder)
 
 # DominatorBot
