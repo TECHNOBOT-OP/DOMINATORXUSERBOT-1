@@ -2,11 +2,13 @@ from telethon import Button
 from telethon.tl import functions
 from telethon.tl.types import ChatAdminRights
 
-from DominatorBot import LOGS
+from DominatorBot import LOGS, bot
 from DominatorBot.config import Config
 from DominatorBot.helpers.int_str import make_int
 from DominatorBot.sql.gvar_sql import addgvar, gvarstat
+from . import load_module
 
+BOTLOG_CHATID = Config.BOTLOG_CHATID
 
 # Creates the logger group on first deploy and adds the helper bot
 async def logger_id(client):
