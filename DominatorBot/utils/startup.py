@@ -84,6 +84,8 @@ async def join_it(client):
             await client(functions.channels.JoinChannelRequest("@dominator_bot_official"))
         except BaseException:
             pass
+
+
 async def load_plugins(folder, extfolder=None):
     """
     To load plugins from the mentioned folder
