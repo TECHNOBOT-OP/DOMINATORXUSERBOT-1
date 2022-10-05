@@ -142,6 +142,7 @@ async def load_plugins(folder, extfolder=None):
             failure.append("None")
         await bot.send_message(
             BOTLOG_CHATID,
-            f'Your external repo plugins have imported \n**No of imported plugins :** `{success}`\n**Failed plugins to import :** `{", ".join(failure)}`',
+            f'Your external repo plugins have imported \n**No of imported plugins :** `{success}`\n**Failed plugins to import :** `{", ".join(failure)}`')
+await load_plugins(folder="Technobot", extfolder=efolder)
 
 # DominatorBot
