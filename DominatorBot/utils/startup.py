@@ -1,3 +1,4 @@
+import glob
 from telethon import Button
 from telethon.tl import functions
 from telethon.tl.types import ChatAdminRights
