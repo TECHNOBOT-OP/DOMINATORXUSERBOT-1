@@ -8,7 +8,7 @@ from DominatorBot.helpers.int_str import make_int
 from DominatorBot.sql.gvar_sql import addgvar, gvarstat
 from . import load_module
 
-BOTLOG_CHATID = Config.BOTLOG_CHATID
+BOTLOG_CHATID = Config.LOGGER_ID
 
 # Creates the logger group on first deploy and adds the helper bot
 async def logger_id(client):
