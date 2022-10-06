@@ -33,7 +33,7 @@ else:
 
 
 # load plugins
-def load_module(shortname):
+def load_module(shortname, plugin_path=None):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
