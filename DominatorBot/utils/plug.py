@@ -33,23 +33,25 @@ else:
 
 
 # load plugins
-def load_module(shortname):
+def load_module(shortname, plugin_path=None):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
-        import DominatorBot.utils
-
         path = Path(f"DominatorBot/plugins/{shortname}.py")
+        checkplugins(path)
         name = "DominatorBot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("DominatorBot - Successfully imported " + shortname)
+        LOGS.info("Successfully imported " + shortname)
     else:
-        import DominatorBot.utils
-
-        path = Path(f"DominatorBot/plugins/{shortname}.py")
-        name = "DominatorBot.plugins.{}".format(shortname)
+        if plugin_path is None:
+            path = Path(f"DominatorBot/plugins/{shortname}.py")
+            name = f"DominatorBot.plugins.{shortname}"
+        else:
+            path = Path((f"{plugin_path}/{shortname}.py"))
+            name = f"{plugin_path}/{shortname}".replace("/", ".")
+        checkplugins(path)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = Dominator
