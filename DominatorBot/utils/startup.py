@@ -110,8 +110,7 @@ async def load_plugins(folder, extfolder=None):
             shortname = path1.stem
             pluginname = shortname.replace(".py", "")
             try:
-                if (pluginname not in Config.UNLOAD) and (
-                    pluginname not in VPS_NOLOAD
+                if (pluginname not in Config.UNLOAD
                 ):
                     flag = True
                     check = 0
