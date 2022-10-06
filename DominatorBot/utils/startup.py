@@ -117,7 +117,7 @@ async def load_plugins(folder, extfolder=None):
                     while flag:
                         try:
                             load_module(
-                                pluginname
+                                pluginname.replace(".py","")
                             )
                             if shortname in failure:
                                 failure.remove(shortname)
