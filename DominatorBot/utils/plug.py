@@ -47,8 +47,8 @@ def load_module(shortname, plugin_path=None):
         LOGS.info("DominatorBot - Successfully imported " + shortname)
     else:
         if plugin_path is None:
-            path = Path(f"Technobot/plugins/{shortname}.py")
-            name = f"Technobot.plugins.{shortname}"
+            path = Path(f"DominatorBot/plugins/{shortname}.py")
+            name = f"DominatorBot.plugins.{shortname}"
         else:
             path = Path((f"{plugin_path}/{shortname}.py"))
             name = f"{plugin_path}/{shortname}".replace("/", ".")
