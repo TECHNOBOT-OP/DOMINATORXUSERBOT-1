@@ -46,7 +46,15 @@ def load_module(shortname):
         spec.loader.exec_module(mod)
         LOGS.info("DominatorBot - Successfully imported " + shortname)
     else:
-        import DominatorBot.utils
+        if plugin_path is None:
+            path = Path(f"Technobot/plugins/{shortname}.py")
+            name = f"Technobot.plugins.{shortname}"
+        else:
+            path = Path((f"{plugin_path}/{shortname}.py"))
+            name = f"{plugin_path}/{shortname}".replace("/", ".")
+        checkplugins(path)
+        spec = importlib.util.spec_from_file_location(name, path)
+        mod = importlib.util.module_from_spec(spec)
 
         path = Path(f"DominatorBot/plugins/{shortname}.py")
         name = "DominatorBot.plugins.{}".format(shortname)
