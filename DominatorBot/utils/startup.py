@@ -143,6 +143,5 @@ async def load_plugins(folder, extfolder=None):
         await bot.send_message(
             BOTLOG_CHATID,
             f'Your external repo plugins have imported \n**No of imported plugins :** `{success}`\n**Failed plugins to import :** `{", ".join(failure)}`')
-            await load_plugins(folder="DominatorBot", extfolder=efolder)
 
 # DominatorBot
