@@ -33,25 +33,23 @@ else:
 
 
 # load plugins
-def load_module(shortname, plugin_path=None):
+def load_module(shortname):
     if shortname.startswith("__"):
         pass
     elif shortname.endswith("_"):
+        import DominatorBot.utils
+
         path = Path(f"DominatorBot/plugins/{shortname}.py")
-        checkplugins(path)
         name = "DominatorBot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
-        LOGS.info("Successfully imported " + shortname)
+        LOGS.info("DominatorBot - Successfully imported " + shortname)
     else:
-        if plugin_path is None:
-            path = Path(f"DominatorBot/plugins/{shortname}.py")
-            name = f"DominatorBot.plugins.{shortname}"
-        else:
-            path = Path((f"{plugin_path}/{shortname}.py"))
-            name = f"{plugin_path}/{shortname}".replace("/", ".")
-        checkplugins(path)
+        import DominatorBot.utils
+
+        path = Path(f"DominatorBot/plugins/{shortname}.py")
+        name = "DominatorBot.plugins.{}".format(shortname)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
         mod.bot = Dominator
@@ -132,16 +130,6 @@ async def plug_channel(client, channel):
                 load_module(shortname.replace(".py", ""))
             except Exception as e:
                 LOGS.error(str(e))
-                
-def checkplugins(filename):
-    with open(filename, "r") as f:
-        filedata = f.read()
-    filedata = filedata.replace("sendmessage", "send_message")
-    filedata = filedata.replace("sendfile", "send_file")
-    filedata = filedata.replace("editmessage", "edit_message")
-    with open(filename, "w") as f:
-        f.write(filedata)
-    
 
 
 # DominatorBot
