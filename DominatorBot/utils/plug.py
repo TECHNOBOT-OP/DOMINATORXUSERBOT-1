@@ -55,11 +55,6 @@ def load_module(shortname, plugin_path=None):
         checkplugins(path)
         spec = importlib.util.spec_from_file_location(name, path)
         mod = importlib.util.module_from_spec(spec)
-
-        path = Path(f"DominatorBot/plugins/{shortname}.py")
-        name = "DominatorBot.plugins.{}".format(shortname)
-        spec = importlib.util.spec_from_file_location(name, path)
-        mod = importlib.util.module_from_spec(spec)
         mod.bot = Dominator
         mod.H1 = Dominator
         mod.H2 = H2
