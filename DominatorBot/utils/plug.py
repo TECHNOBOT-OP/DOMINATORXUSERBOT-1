@@ -132,6 +132,16 @@ async def plug_channel(client, channel):
                 load_module(shortname.replace(".py", ""))
             except Exception as e:
                 LOGS.error(str(e))
+                
+def checkplugins(filename):
+    with open(filename, "r") as f:
+        filedata = f.read()
+    filedata = filedata.replace("sendmessage", "send_message")
+    filedata = filedata.replace("sendfile", "send_file")
+    filedata = filedata.replace("editmessage", "edit_message")
+    with open(filename, "w") as f:
+        f.write(filedata)
+    
 
 
 # DominatorBot
