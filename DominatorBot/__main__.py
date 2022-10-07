@@ -76,6 +76,7 @@ async def start_DominatorBot():
         LOGS.info("║┣⪼ 𝕊𝕥𝕒𝕣𝕥𝕚𝕟𝕘. 𝕃𝕠𝕕𝕚𝕟𝕘...")
         LOGS.info("╚══════════════════❍⊱")
         await plug_load("DominatorBot/plugins/*.py")
+        await plug_load("DominatorBot/assistant/*.py")
         await plug_channel(bot, Config.PLUGIN_CHANNEL)
         LOGS.info(f"""『🔱𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗 Աʂҽɾβօէ🔱』➙𖤍࿐ IS ON!!! 𝕯𝖔𝖒𝖎𝖓𝖆𝖙𝖔𝖗 Աʂҽɾβօէ VERSION :- 𝕍:𝕒 𝟙.𝟘
                       TYPE :- " .gpromote @N1xDOMINATOR " OR .help OR .ping CHECK IF I'M ON!
