@@ -13,7 +13,7 @@ from ..sql_helper.globals import addgvar, delgvar
 LOGS = logging.getLogger(__name__)
 
 
-@DominatorBot_cmd.on(CallbackQuery(data=re.compile(r"^age_verification_true")))
+@DominatorBot_cmd(CallbackQuery(data=re.compile(r"^age_verification_true")))
 async def age_verification_true(event: CallbackQuery):
     u_id = event.query.user_id
     if u_id != Config.OWNER_ID and u_id not in Config.SUDO_USERS:
@@ -39,7 +39,7 @@ async def age_verification_true(event: CallbackQuery):
         pass
 
 
-@DominatorBot_cmd.on(CallbackQuery(data=re.compile(r"^age_verification_false")))
+@DominatorBot_cmd(CallbackQuery(data=re.compile(r"^age_verification_false")))
 async def age_verification_false(event: CallbackQuery):
     u_id = event.query.user_id
     if u_id != Config.OWNER_ID and u_id not in Config.SUDO_USERS:
@@ -65,7 +65,7 @@ async def age_verification_false(event: CallbackQuery):
         pass
 
 
-@DominatorBot_cmd.on(CallbackQuery(data=re.compile(r"^chg_of_decision_")))
+@DominatorBot_cmd(CallbackQuery(data=re.compile(r"^chg_of_decision_")))
 async def chg_of_decision_(event: CallbackQuery):
     u_id = event.query.user_id
     if u_id != Config.OWNER_ID and u_id not in Config.SUDO_USERS:
