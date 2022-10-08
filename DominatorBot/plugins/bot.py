@@ -34,7 +34,7 @@ async def pong(dominator):
         PIC = choice(pic_list)
     else:
         PIC = None
-    event = await eor(dominator, "`·.·★ ℘ıŋɠ ★·.·´")
+    event = await eor(dominator, "`❝❄ᑭ♨ɳց…!❄❞´")
     cid = await client_id(event)
     ForGo10God, DOMINATOR_USER = cid[0], cid[1]
     dominator_mention = f"<a href='tg://user?id={ForGo10God}'>{DOMINATOR_USER}</a>"
