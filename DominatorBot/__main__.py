@@ -49,7 +49,6 @@ async def dominator_is_on(total):
     await update_sudo()
     await logger_check(bot)
     await start_msg(tbot, DOMINATOR_PIC, dominatorver, total)
-    await load_plugins("assistant")
     await join_it(bot)
     await join_it(H2)
     await join_it(H3)
