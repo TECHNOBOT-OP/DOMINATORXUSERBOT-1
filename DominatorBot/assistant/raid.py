@@ -325,7 +325,7 @@ RAID = [
 ]
 
 
-@DominatorBot_cmd.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
+@tgbot.on(events.NewMessage(pattern="/raid", func=lambda e: e.sender_id == bot.uid))
 async def spam(e):
     usage = "**CMD** : /raid <value> <text> <reply to anyone>"
     if Config.SPAM == "ON":
@@ -358,7 +358,7 @@ async def spam(e):
         await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@DominatorBot_cmd.on(events.NewMessage(incoming=True))
+@tgbot.on(events.NewMessage(incoming=True))
 async def raidgoing(event):
     global que
     queue = que.get(event.sender_id)
@@ -374,7 +374,7 @@ async def raidgoing(event):
         )
 
 
-@DominatorBot_cmd.on(
+@tgbot.on(
     events.NewMessage(pattern="/replyraid", func=lambda x: x.sender_id == bot.uid)
 )
 async def replyraid(e):
@@ -398,7 +398,7 @@ async def replyraid(e):
             await e.reply(usage, parse_mode=None, link_preview=None)
 
 
-@DominatorBot_cmd.on(
+@tgbot.on(
     events.NewMessage(pattern="/dreplyraid", func=lambda x: x.sender_id == bot.uid)
 )
 async def dreplyraid(e):
