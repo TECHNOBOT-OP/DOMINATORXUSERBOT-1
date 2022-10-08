@@ -12,7 +12,7 @@ from telethon.tl.functions.channels import LeaveChannelRequest
 from ..sql.gvar_sql import gvarstat
 from . import *
 
-ping_txt = """█████████\n█▄█████▄█\n█▼▼▼▼▼\n█Ꭰօʍìղąէօɾβօէ įʂ ටղƑìɾҽ\n█▲▲▲▲▲\n█████████\n██ ██\n
+ping_txt = """█████████\n█▄█████▄█\n█▼▼▼▼▼\n█🔥Ꭰօʍìղąէօɾβօէ įʂ ටղƑìɾҽ🔥\n█▲▲▲▲▲\n█████████\n██ ██\n
     ⚘  <i>ʂ℘ɛɛɖ :</i> <code>{}</code>
     ⚘  <i>ų℘ɬıɱɛ :</i> <code>{}</code>
     ⚘  <i>ơῳŋɛཞ :</i> {}
