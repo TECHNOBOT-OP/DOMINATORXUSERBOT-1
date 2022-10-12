@@ -1,4 +1,4 @@
-import asyncio
+"""import asyncio
 import json
 import os
 import re
@@ -130,4 +130,4 @@ CmdHelp("youtube").add_command(
   "Youthoob ki duniya."
 ).add_warning(
   "✅ Harmless Module."
-).add()
+).add()"""
