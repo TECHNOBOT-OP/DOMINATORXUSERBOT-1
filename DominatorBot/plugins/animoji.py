@@ -4,7 +4,7 @@ from collections import deque
 from . import *
 
 
-@dominator_cmd(pattern="think$")
+@hell_cmd(pattern="think$")
 async def _(event):
     event = await eor(event, "think")
     deq = deque(list("🤔🧐🤔🧐🤔🧐"))
@@ -14,12 +14,12 @@ async def _(event):
         deq.rotate(1)
 
 
-@dominator_cmd(pattern="ccry$")
+@hell_cmd(pattern="ccry$")
 async def cry(e):
     await eor(e, "(;´༎ຶД༎ຶ)")
 
 
-@dominator_cmd(pattern="fap$")
+@hell_cmd(pattern="fap$")
 async def _(event):
     event = await eor(event, "fapping(°_°)")
     deq = deque(list("🍆✊🏻💦"))
@@ -29,7 +29,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@dominator_cmd(pattern="lmao$")
+@hell_cmd(pattern="lmao$")
 async def _(event):
     event = await eor(event, "lmao")
     deq = deque(list("😂🤣😂🤣😂🤣"))
@@ -39,7 +39,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@dominator_cmd(pattern="nothappy$")
+@hell_cmd(pattern="nothappy$")
 async def _(event):
     event = await eor(event, "nathappy")
     deq = deque(list("😁☹️😁☹️😁☹️😁"))
@@ -49,7 +49,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@dominator_cmd(pattern="clock$")
+@hell_cmd(pattern="clock$")
 async def _(event):
     event = await eor(event, "clock")
     deq = deque(list("🕙🕘🕗🕖🕕🕔🕓🕒🕑🕐🕛"))
@@ -59,7 +59,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@dominator_cmd(pattern="muah$")
+@hell_cmd(pattern="muah$")
 async def _(event):
     event = await eor(event, "muah")
     deq = deque(list("😗😙😚😚😘"))
@@ -69,7 +69,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@dominator_cmd(pattern="heart$")
+@hell_cmd(pattern="heart$")
 async def _(event):
     event = await eor(event, "heart")
     deq = deque(list("❤️🧡💛💚💙💜🖤"))
@@ -79,7 +79,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@dominator_cmd(pattern="gym$")
+@hell_cmd(pattern="gym$")
 async def _(event):
     event = await eor(event, "gym")
     deq = deque(list("🏃‍🏋‍🤸‍🏃‍🏋‍🤸‍🏃‍🏋‍🤸‍"))
@@ -89,7 +89,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@dominator_cmd(pattern="earth$")
+@hell_cmd(pattern="earth$")
 async def _(event):
     event = await eor(event, "earth")
     deq = deque(list("🌏🌍🌎🌎🌍🌏🌍🌎"))
@@ -99,7 +99,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@dominator_cmd(pattern="moon$")
+@hell_cmd(pattern="moon$")
 async def _(event):
     event = await eor(event, "moon")
     deq = deque(list("🌗🌘🌑🌒🌓🌔🌕🌖"))
@@ -108,7 +108,7 @@ async def _(event):
         await event.edit("".join(deq))
         deq.rotate(1)
 
-@dominator_cmd(pattern="lovestory$")
+@hell_cmd(pattern="lovestory$")
 async def _(event):
     animation_interval = 3
     animation_ttl = range(0, 103)
@@ -133,7 +133,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
         await event.edit(animation_chars[i % 103])
 
-@dominator_cmd(pattern="smoon$")
+@hell_cmd(pattern="smoon$")
 async def _(event):
     event = await eor(event, "smoon")
     animation_interval = 0.1
@@ -154,7 +154,7 @@ async def _(event):
         await event.edit(animation_chars[i % 8])
 
 
-@dominator_cmd(pattern="tmoon$")
+@hell_cmd(pattern="tmoon$")
 async def _(event):
     event = await eor(event, "tmoon")
     animation_interval = 0.1
@@ -199,7 +199,7 @@ async def _(event):
         await event.edit(animation_chars[i % 32])
 
 
-@dominator_cmd(pattern="hart$")
+@hell_cmd(pattern="hart$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(20)
@@ -210,7 +210,7 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@dominator_cmd(pattern="anim$")
+@hell_cmd(pattern="anim$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(20)
@@ -230,7 +230,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@dominator_cmd(pattern="fuck$")
+@hell_cmd(pattern="fuck$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(0, 101)
@@ -241,7 +241,7 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@dominator_cmd(pattern="sux$")
+@hell_cmd(pattern="sux$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(0, 101)
@@ -252,7 +252,7 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@dominator_cmd(pattern="kiss$")
+@hell_cmd(pattern="kiss$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(0, 101)
@@ -263,7 +263,7 @@ async def _(event):
         await event.edit(animation_chars[i % 4])
 
 
-@dominator_cmd(pattern="fnl$")
+@hell_cmd(pattern="fnl$")
 async def _(event):
     animation_interval = 2
     animation_ttl = range(6)
@@ -274,7 +274,7 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@dominator_cmd(pattern="monkey$")
+@hell_cmd(pattern="monkey$")
 async def _(event):
     animation_interval = 2
     animation_ttl = range(12)
@@ -285,7 +285,7 @@ async def _(event):
         await event.edit(animation_chars[i % 6])
 
 
-@dominator_cmd(pattern="hand$")
+@hell_cmd(pattern="hand$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(13)
@@ -310,7 +310,7 @@ async def _(event):
         await event.edit(animation_chars[i % 13])
 
 
-@dominator_cmd(pattern="gsg$")
+@hell_cmd(pattern="gsg$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(12)
@@ -334,7 +334,7 @@ async def _(event):
         await event.edit(animation_chars[i % 12])
 
 
-@dominator_cmd(pattern="theart$")
+@hell_cmd(pattern="theart$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(54)

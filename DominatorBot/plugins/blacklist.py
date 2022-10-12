@@ -2,11 +2,11 @@ import re
 
 from telethon import events
 
-from DominatorBot.sql import blacklist_sql as sq
+from UltronBot.sql import blacklist_sql as sq
 from . import *
 
 
-@dominator_handler()
+@hell_handler()
 async def on_new_message(event):
     name = event.raw_text
     snips = sq.get_chat_blacklist(event.chat_id)
@@ -85,7 +85,7 @@ if H5:
                 break
 """
 
-@dominator_cmd(pattern="addblacklist(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="addblacklist(?:\s|$)([\s\S]*)")
 async def on_add_black_list(event):
     text = event.pattern_match.group(1)
     to_blacklist = list(
@@ -102,7 +102,7 @@ async def on_add_black_list(event):
     )
 
 
-@dominator_cmd(pattern="rmblacklist(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="rmblacklist(?:\s|$)([\s\S]*)")
 async def on_delete_blacklist(event):
     text = event.pattern_match.group(1)
     to_unblacklist = list(
@@ -119,7 +119,7 @@ async def on_delete_blacklist(event):
     )
 
 
-@dominator_cmd(pattern="listblacklist$")
+@hell_cmd(pattern="listblacklist$")
 async def on_view_blacklist(event):
     all_blacklisted = sq.get_chat_blacklist(event.chat_id)
     OUT_STR = "Blacklists in the Current Chat:\n"
@@ -145,7 +145,7 @@ async def on_view_blacklist(event):
 
 
 CmdHelp("blacklist").add_command(
-  "addblacklist", "<word>/<words>", "The given word or words will be added to blacklist in that specific chat if any user sends then the message gets deleted.\n\nNote :- If you are adding more than one word at time via this, then remember that new word must be given in a new line that is not [hi dominatoro]. It must be as [hi \n dominatoro]"
+  "addblacklist", "<word>/<words>", "The given word or words will be added to blacklist in that specific chat if any user sends then the message gets deleted.\n\nNote :- If you are adding more than one word at time via this, then remember that new word must be given in a new line that is not [hi hello]. It must be as [hi \n hello]"
 ).add_command(
   "rmblacklist", "<word>/<words>", "The given word or words will be removed from blacklist in that specific chat"
 ).add_command(

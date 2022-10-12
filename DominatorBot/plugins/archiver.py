@@ -20,7 +20,7 @@ if not os.path.isdir(extracted):
     os.makedirs(extracted)
 
 
-@dominator_cmd(pattern="zip$")
+@hell_cmd(pattern="zip$")
 async def _(event):
     if not event.is_reply:
         await eod(event, "Reply to a file to compress it. Bruh.")
@@ -61,7 +61,7 @@ def zipdir(path, ziph):
             os.remove(os.path.join(root, file))
 
 
-@dominator_cmd(pattern="compress$")
+@hell_cmd(pattern="compress$")
 async def _(event):
     if not event.is_reply:
         await eor(event, "Reply to a file to compress it.")
@@ -90,7 +90,7 @@ async def _(event):
     await event.client.send_file(
         event.chat_id,
         directory_name + ".zip",
-        caption="Zipped By DominatorBot",
+        caption="Zipped By UltronBot",
         force_document=True,
         allow_cache=False,
         reply_to=event.message.id,
@@ -107,7 +107,7 @@ def zipdir(path, ziph):
             os.remove(os.path.join(root, file))
 
 
-@dominator_cmd(pattern="rar ([\s\S]*)")
+@hell_cmd(pattern="rar ([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     mone = await eor(event, "Processing ...")
@@ -132,7 +132,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 directory_name + ".rar",
-                caption="rarred By DominatorBot",
+                caption="rarred By UltronBot",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -154,7 +154,7 @@ async def _(event):
         )
 
 
-@dominator_cmd(pattern="7z ([\s\S]*)")
+@hell_cmd(pattern="7z ([\s\S]*)")
 async def _(event): 
     input_str = event.pattern_match.group(1)
     mone = await eor(event, "Processing ...")
@@ -179,7 +179,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 directory_name + ".7z",
-                caption="7z archived By DominatorBot",
+                caption="7z archived By UltronBot",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -199,7 +199,7 @@ async def _(event):
         await mone.edit("Local file compressed to `{}`".format(directory_name + ".7z"))
 
 
-@dominator_cmd(pattern="tar ([\s\S]*)")
+@hell_cmd(pattern="tar ([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     mone = await eor(event, "Processing ...")
@@ -228,7 +228,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 output,
-                caption="TAR By DominatorBot",
+                caption="TAR By UltronBot",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -277,7 +277,7 @@ async def create_archive(input_directory):
     return return_name
 
 
-@dominator_cmd(pattern="unzip$")
+@hell_cmd(pattern="unzip$")
 async def _(event):
     mone = await eor(event, "Processing ...")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -363,7 +363,7 @@ async def _(event):
         os.remove(downloaded_file_name)
 
 
-@dominator_cmd(pattern="unrar$")
+@hell_cmd(pattern="unrar$")
 async def _(event):
     mone = await eor(event, "Processing ...")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -448,7 +448,7 @@ async def _(event):
         os.remove(downloaded_file_name)
 
 
-@dominator_cmd(pattern="untar$")
+@hell_cmd(pattern="untar$")
 async def _(event):
     mone = await eor(event, "Processing ...")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -478,26 +478,7 @@ async def _(event):
                 "Stored the tar to `{}` in {} seconds.".format(downloaded_file_name, ms)
             )
         with tarfile.TarFile.open(downloaded_file_name, "r") as tar_file:
-            def is_within_directory(directory, target):
-                
-                abs_directory = os.path.abspath(directory)
-                abs_target = os.path.abspath(target)
-            
-                prefix = os.path.commonprefix([abs_directory, abs_target])
-                
-                return prefix == abs_directory
-            
-            def safe_extract(tar, path=".", members=None, *, numeric_owner=False):
-            
-                for member in tar.getmembers():
-                    member_path = os.path.join(path, member.name)
-                    if not is_within_directory(path, member_path):
-                        raise Exception("Attempted Path Traversal in Tar File")
-            
-                tar.extractall(path, members, numeric_owner=numeric_owner) 
-                
-            
-            safe_extract(tar_file, path=extracted)
+            tar_file.extractall(path=extracted)
         filename = sorted(get_lst_of_files(extracted, []))
         await mone.edit("Untarring now")
         for single_file in filename:

@@ -4,7 +4,7 @@ import traceback
 from . import *
 
 
-@dominator_cmd(pattern="calc ([\s\S]*)")
+@hell_cmd(pattern="calc ([\s\S]*)")
 async def _(car):
     cmd = car.text.split(" ", maxsplit=1)[1]
     event = await eor(car, "Calculating ...")

@@ -1,52 +1,52 @@
 from telethon import events
 
-from DominatorBot.sql.autopost_sql import add_post, get_all_post, is_post, remove_post
-from DominatorBot.sql.gvar_sql import gvarstat, addgvar, delgvar
+from UltronBot.sql.autopost_sql import add_post, get_all_post, is_post, remove_post
+from UltronBot.sql.gvar_sql import gvarstat, addgvar, delgvar
 
 from . import *
 
 
-@dominator_cmd(pattern="autopost(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="autopost(?:\s|$)([\s\S]*)")
 async def _(event):
     if event.is_private:
         return await eod(event, "AutoPost Can Only Be Used For Channels & Groups.")
-    dominator = await eor(event, "Trying to start autoposting from here...")
+    hell = await eor(event, "Trying to start autoposting from here...")
     cid = await client_id(event)
     ForGo10God = cid[0]
     hel_ = event.text[10:]
     cli_ = ForGo10God
     checker = gvarstat(f"AUTOPOST_{str(cli_)}")
     if hel_ == "":
-        return await eod(dominator, f"Give correct command for working of autopost. \n`{hl}autopost channel_id`")
+        return await eod(hell, f"Give correct command for working of autopost. \n`{hl}autopost channel_id`")
     if str(hel_).startswith("-100"):
         kk = str(hel_).replace("-100", "")
     else:
         kk = hel_
     if not kk.isdigit():
-        return await eod(dominator, "**Please Give Channel ID !!**")
+        return await eod(hell, "**Please Give Channel ID !!**")
     if is_post(kk , event.chat_id):
         if checker and checker == "True":
-            return await dominator.edit("This channel is already in this client's autopost database.")
+            return await hell.edit("This channel is already in this client's autopost database.")
         else:
             addgvar(f"AUTOPOST_{str(cli_)}", "True")
-            return await dominator.edit(f"**📍 Started AutoPosting from** `{hel_}` for `{cli_}`")
+            return await hell.edit(f"**📍 Started AutoPosting from** `{hel_}` for `{cli_}`")
     add_post(kk, event.chat_id)
     addgvar(f"AUTOPOST_{str(cli_)}", "True")
-    await dominator.edit(f"**📍 Started AutoPosting from** `{hel_}` for `{cli_}`")
+    await hell.edit(f"**📍 Started AutoPosting from** `{hel_}` for `{cli_}`")
 
 
-@dominator_cmd(pattern="rmautopost(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="rmautopost(?:\s|$)([\s\S]*)")
 async def _(event):
     if event.is_private:
         return await eod(event, "AutoPost Can Only Be Used For Channels.")
-    dominator = await eor(event, "Removing autopost...")
+    hell = await eor(event, "Removing autopost...")
     cid = await client_id(event)
     ForGo10God = cid[0]
     hel_ = event.text[12:]
     cli_ = ForGo10God
     checker = gvarstat(f"AUTOPOST_{str(cli_)}")
     if hel_ == "":
-        return await eod(dominator, f"Give correct command for removing autopost. \n`{hl}autopost channel_id`")
+        return await eod(hell, f"Give correct command for removing autopost. \n`{hl}autopost channel_id`")
     if str(hel_).startswith("-100"):
         kk = str(hel_).replace("-100", "")
     else:
@@ -59,12 +59,12 @@ async def _(event):
         if checker and checker == "True":
             remove_post(kk, event.chat_id)
             delgvar(f"AUTOPOST_{str(cli_)}")
-            return await eod(dominator, f"Removed `{hel_}` from `{cli_}` autopost database.")
+            return await eod(hell, f"Removed `{hel_}` from `{cli_}` autopost database.")
         else:
-            return await eod(dominator, f"This channel is not in `{cli_}` autopost database.")
+            return await eod(hell, f"This channel is not in `{cli_}` autopost database.")
 
 
-@dominator_handler()
+@hell_handler()
 async def _(event):
     chat_id = str(event.chat_id).replace("-100", "")
     channels_set  = get_all_post(chat_id)

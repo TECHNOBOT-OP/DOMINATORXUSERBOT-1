@@ -6,7 +6,7 @@ from subprocess import run as runapp
 from . import *
 
 
-@dominator_cmd(pattern="hash ([\s\S]*)")
+@hell_cmd(pattern="hash ([\s\S]*)")
 @errors_handler
 async def gethash(event):
     event = await eor(event, "Processing...")
@@ -52,7 +52,7 @@ async def gethash(event):
         await event.delete()
 
 
-@dominator_cmd(pattern="b64 (en|de) ([\s\S]*)")
+@hell_cmd(pattern="b64 (en|de) ([\s\S]*)")
 @errors_handler
 async def endecrypt(event):
     if event.pattern_match.group(1) == "en":

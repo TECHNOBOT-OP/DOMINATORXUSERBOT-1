@@ -4,7 +4,7 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from . import *
 
 
-@dominator_cmd(pattern="ascii(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="ascii(?:\s|$)([\s\S]*)")
 async def _(event):
     if not event.reply_to_msg_id:
         return await eor(event, "Reply to any user message.😒🤐")
@@ -13,7 +13,7 @@ async def _(event):
         return await eor(event, "Reply to media message😒🤐")
     bot = "@asciiart_bot"
     cid = await client_id(event)
-    dominator_mention = cid[2]
+    hell_mention = cid[2]
     kraken = await eor(event, "Wait making ASCII...🤓🔥🔥")
     async with event.client.conversation(bot) as conv:
         try:
@@ -25,13 +25,13 @@ async def _(event):
         except YouBlockedUserError:
             await kraken.edit("User Blocked!! Please Unblock @asciiart_bot and try again...")
             return
-    await event.client.send_file(event.chat_id, file=output_op, caption=f"ASCII art By :- {dominator_mention}", force_document=False)
+    await event.client.send_file(event.chat_id, file=output_op, caption=f"ASCII art By :- {hell_mention}", force_document=False)
     await kraken.delete()  
     await event.client.delete_messages(
         conv.chat_id, [first.id, response.id, second.id, output_op.id]
     )
 
-@dominator_cmd(pattern="line(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="line(?:\s|$)([\s\S]*)")
 async def _(event):
     if not event.reply_to_msg_id:
         await eor(event, "Reply to any user message.😒🤐")
@@ -42,7 +42,7 @@ async def _(event):
         return
     bot = "@lines50bot"
     cid = await client_id(event)
-    dominator_mention = cid[2]
+    hell_mention = cid[2]
     kraken = await eor(event, "`Processing...`")
     async with event.client.conversation(bot) as conv:
         try:
@@ -54,7 +54,7 @@ async def _(event):
         except YouBlockedUserError:
             await kraken.edit("User Blocked!! Please Unblock @Lines50Bot and try again...")
             return
-    await event.client.send_file(event.chat_id, file=output_op, caption=f"Lines By :- {dominator_mention}", force_document=False)
+    await event.client.send_file(event.chat_id, file=output_op, caption=f"Lines By :- {hell_mention}", force_document=False)
     await kraken.delete()
     await event.client.delete_messages(
         conv.chat_id, [first.id, response.id, second.id, output_op.id]

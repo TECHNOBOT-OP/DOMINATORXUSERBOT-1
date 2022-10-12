@@ -6,7 +6,7 @@ from . import *
 
 neko_category = ['feet', 'yuri', 'trap', 'futanari', 'hololewd', 'lewdkemo', 'solog', 'feetg', 'cum', 'erokemo', 'les', 'wallpaper', 'lewdk', 'ngif', 'tickle', 'lewd', 'feed', 'gecg', 'eroyuri', 'eron', 'cum_jpg', 'bj', 'nsfw_neko_gif', 'solo', 'kemonomimi', 'nsfw_avatar', 'gasm', 'poke', 'anal', 'slap', 'hentai', 'avatar', 'erofeet', 'holo', 'keta', 'blowjob', 'pussy', 'tits', 'holoero', 'lizard', 'pussy_jpg', 'pwankg', 'classic', 'kuni', 'waifu', 'pat', '8ball', 'kiss', 'femdom', 'neko', 'spank', 'cuddle', 'erok', 'fox_girl', 'boobs', 'random_hentai_gif', 'smallboobs', 'hug', 'ero', 'smug', 'goose', 'baka', 'woof']
 
-@dominator_cmd(pattern="nekos(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="nekos(?:\s|$)([\s\S]*)")
 async def _(event):
     x = await event.get_chat()
     y = x.id
@@ -16,18 +16,18 @@ async def _(event):
         return await eor(event, "**This command is only for users with variable** `ABUSE` **as** `ON`")
     owo = event.text[7:]
     if owo in neko_category:
-        dominator = await eor(event, f"`Searching {owo} ...`")
+        hell = await eor(event, f"`Searching {owo} ...`")
         link = nekos.img(owo)
         x = await event.client.send_file(event.chat_id, link, force_document=False)
-        await dominator.delete()
+        await hell.delete()
         if link.endswith((".gif")):
             await unsave_gif(event, x)
     elif owo == "":
-        dominator = await eor(event, "`Searching randoms...`")
+        hell = await eor(event, "`Searching randoms...`")
         uwu = random.choice(neko_category)
         link = nekos.img(uwu)
         x = await event.client.send_file(event.chat_id, link, force_document=False)
-        await dominator.delete()
+        await hell.delete()
         if link.endswith((".gif")):
             await unsave_gif(event, x)
     else:

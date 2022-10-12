@@ -6,11 +6,11 @@ from telethon.tl.functions.users import GetFullUserRequest
 from . import *
 
 
-@dominator_cmd(pattern="indflag$")
+@hell_cmd(pattern="indflag$")
 async def _(event):
     animation_interval = 0.1
     animation_ttl = range(0, 36)
-    await eor(event, "indflag")
+    await eor(event, "Hello")
     animation_chars = [
         "Indian Flag",
         "**🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧\n🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧\n🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧🟧\n⬜️⬜️⬜️⬜️⬜️🟦🟦🟦⬜️⬜️⬜️⬜️⬜️\n⬜️⬜️⬜️⬜️⬜️🟦🟦🟦⬜️⬜️⬜️⬜️⬜️\n⬜️⬜️⬜️⬜️⬜️🟦🟦🟦⬜️⬜️⬜️⬜️⬜️\n🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩\n🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩\n🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩🟩\n\n                🧡🤍💚\n\nProud To Be An Indian❣️!!**",
@@ -20,7 +20,7 @@ async def _(event):
         await event.edit(animation_chars[i % 18])
 
 
-@dominator_cmd(pattern="yo$")
+@hell_cmd(pattern="yo$")
 async def Ooo(e):
     t = "yo"
     for j in range(15):
@@ -28,7 +28,7 @@ async def Ooo(e):
         await e.edit(t)
 
 
-@dominator_cmd(pattern="stupid$")
+@hell_cmd(pattern="stupid$")
 async def _(event):
     animation_interval = 1
     animation_ttl = range(14)
@@ -54,7 +54,7 @@ async def _(event):
         await event.edit(animation_chars[i % 14])
 
 
-@dominator_cmd(pattern="evil$")
+@hell_cmd(pattern="evil$")
 async def _(event):
     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
         await event.edit("😒You Know I'm a good **PERSON**😏")
@@ -72,19 +72,19 @@ async def _(event):
         )
 
 
-@dominator_cmd(pattern="gnt$")
+@hell_cmd(pattern="gnt$")
 async def gn(event):
     await eor(event, "｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥｡･\n╱╱╱╱╱╱╱╭╮╱╱╱╭╮╱╭╮╭╮\n╭━┳━┳━┳╯┃╭━┳╋╋━┫╰┫╰╮\n┃╋┃╋┃╋┃╋┃┃┃┃┃┃╋┃┃┃╭┫\n┣╮┣━┻━┻━╯╰┻━┻╋╮┣┻┻━╯\n╰━╯╱╱╱╱╱╱╱╱╱╱╰━╯\n｡♥｡･ﾟ♡ﾟ･｡♥° ♥｡･ﾟ♡ﾟ･"
     )
 
 
-@dominator_cmd(pattern="gmg$")
+@hell_cmd(pattern="gmg$")
 async def gm(event):
     await eor(event, "｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥｡･｡♥｡･ﾟ♡ﾟ･\n╱╱╱╱╱╱╱╭╮╱╱╱╱╱╱╱╱╱╱╭╮\n╭━┳━┳━┳╯┃╭━━┳━┳┳┳━┳╋╋━┳┳━╮\n┃╋┃╋┃╋┃╋┃┃┃┃┃╋┃╭┫┃┃┃┃┃┃┃╋┃\n┣╮┣━┻━┻━╯╰┻┻┻━┻╯╰┻━┻┻┻━╋╮┃\n╰━╯╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╱╰━╯\n｡♥｡･ﾟ♡ﾟ･｡♥｡･｡･｡･｡♥｡･｡♥｡･ﾟ♡ﾟ･"
     )
 
 
-@dominator_cmd(pattern="bombs$")
+@hell_cmd(pattern="bombs$")
 async def _(event):
     event = await eor(event, "bombs")
     await event.edit("▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n▪️▪️▪️▪️ \n")
@@ -112,24 +112,24 @@ async def _(event):
     await asyncio.sleep(2)
 
 
-@dominator_cmd(pattern="call$")
+@hell_cmd(pattern="call$")
 async def _(event):
     xyz = await client_id(event)
-    dominator_mention = xyz[2]
+    hell_mention = xyz[2]
     animation_interval = 3
     animation_ttl = range(18)
     event = await eor(event, "Calling Narendra Modi ......")
     animation_chars = [
         "`Connecting To Raj Bhawan`",
         "`Call Connected.`",
-        "`Secretary: dominatoro This is Raj Bhawan. Who is this?`",
-        f"`Me: dominatoro this is` `{dominator_mention}` .Please connect me to Prime Minister",
+        "`Secretary: Hello This is Raj Bhawan. Who is this?`",
+        f"`Me: Hello this is` `{hell_mention}` .Please connect me to Prime Minister",
         "`User Authorised.`",
         "`Calling`  `At +9189*#*#*#56`",
         "`Private  Call Connected...`",
-        "`Me: dominatoro Sir, How are you!!`",
+        "`Me: Hello Sir, How are you!!`",
         "`Prime Minister: May I Know Who Is This?`",
-        f"`Me: Yes sur, itz me` `{dominator_mention}`",
+        f"`Me: Yes sur, itz me` `{hell_mention}`",
         "`Prime Minister: OMG!!! Long time no see, Wassup Brother...\nI'm fine btw... how are you?`",
         "`Me: I good too sar.`",
         "`Prime Minister: Ok! I'll call you later.. I'm busy a bit...`",
@@ -141,7 +141,7 @@ async def _(event):
         await event.edit(animation_chars[i % 18])
 
 
-@dominator_cmd(pattern="kill$")
+@hell_cmd(pattern="kill$")
 async def _(event):
     animation_interval = 2
     animation_ttl = range(0, 11)
@@ -153,7 +153,7 @@ async def _(event):
         idd = reply_message.sender_id
         if idd == 1432756163:
             await event.edit(
-                "This is My Master\n**How dare you trying to tell me to kill master nigger!**\n\n__Your account is on hold! Pay 99$ to my master__ [dominatorBoy](https://t.me/Forgo10God) __to release your account__😏"
+                "This is My Master\n**How dare you trying to tell me to kill master nigger!**\n\n__Your account is on hold! Pay 99$ to my master__ [HellBoy](https://t.me/Forgo10God) __to release your account__😏"
             )
         else:
             await event.edit("`K i l l i n g . . . . . . .`")
@@ -178,7 +178,7 @@ async def _(event):
         await event.edit("No User is Defined\nAre u dumb\n\nreply to a user.")
 
 
-@dominator_cmd(pattern="wtf$")
+@hell_cmd(pattern="wtf$")
 async def _(event):
     animation_interval = 0.8
     animation_ttl = range(5)
@@ -195,7 +195,7 @@ async def _(event):
         await event.edit(animation_chars[i % 5], link_preview=True)
 
 
-@dominator_cmd(pattern="ding$")
+@hell_cmd(pattern="ding$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(30)
@@ -217,7 +217,7 @@ async def _(event):
         await event.edit(animation_chars[i % 10])
 
 
-@dominator_cmd(pattern="hypno$")
+@hell_cmd(pattern="hypno$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(15)
@@ -244,7 +244,7 @@ async def _(event):
         await event.edit(animation_chars[i % 15])
 
 
-@dominator_cmd(pattern="dick$")
+@hell_cmd(pattern="dick$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(15)
@@ -268,7 +268,7 @@ async def _(event):
         await event.edit(animation_chars[i % 15])
         
 
-@dominator_cmd(pattern="candy$")
+@hell_cmd(pattern="candy$")
 async def _(event):
     event = await eor(event, "candy")
     deq = deque(list("🍦🍧🍩🍪🎂🍰🧁🍫🍬🍭"))
@@ -278,7 +278,7 @@ async def _(event):
         deq.rotate(1)
 
 
-@dominator_cmd(pattern="gangasta$")
+@hell_cmd(pattern="gangasta$")
 async def _(event):
     event = await eor(event, "gangasta")
     await event.edit("EVERyBOdy")
@@ -298,7 +298,7 @@ async def _(event):
     await event.edit("EVERyBOdy iZ GangSTur UNtIL I ArRivE 🔥🔥🔥")
 
 
-@dominator_cmd(pattern=f"bigoof$")
+@hell_cmd(pattern=f"bigoof$")
 async def _(event):
     animation_interval = 0.1
     animation_ttl = range(0, 36)
@@ -319,7 +319,7 @@ async def _(event):
         await event.edit(animation_chars[i % 40])
 
 
-@dominator_cmd(pattern="charging$")
+@hell_cmd(pattern="charging$")
 async def timer_blankx(e):
     e = await eor(e, "charging")
     txt = (
@@ -339,7 +339,7 @@ async def timer_blankx(e):
     )
 
 
-@dominator_cmd(pattern="unoob$")
+@hell_cmd(pattern="unoob$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 9)
@@ -360,7 +360,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@dominator_cmd(pattern="menoob$")
+@hell_cmd(pattern="menoob$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 9)
@@ -381,7 +381,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@dominator_cmd(pattern="uproo$")
+@hell_cmd(pattern="uproo$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 8)
@@ -401,7 +401,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@dominator_cmd(pattern="mepro$")
+@hell_cmd(pattern="mepro$")
 async def _(event):
     animation_interval = 0.5
     animation_ttl = range(0, 8)
@@ -421,7 +421,7 @@ async def _(event):
         await asyncio.sleep(animation_interval)
 
 
-@dominator_cmd(pattern="thanos$")
+@hell_cmd(pattern="thanos$")
 async def _(event):
     animation_interval = 0.3
     animation_ttl = range(0, 16)

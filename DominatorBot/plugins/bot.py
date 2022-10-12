@@ -21,8 +21,8 @@ ping_txt = """
 """
 
 
-@dominator_cmd(pattern="ping$")
-async def pong(dominator):
+@hell_cmd(pattern="ping$")
+async def pong(hell):
     start = datetime.datetime.now()
     a = gvarstat("PING_PIC")
     pic_list = []
@@ -34,25 +34,25 @@ async def pong(dominator):
         PIC = choice(pic_list)
     else:
         PIC = None
-    event = await eor(dominator, "`❝❄ᑭ♨ɳց…!❄❞´")
+    event = await eor(hell, "`·.·★ ℘ıŋɠ ★·.·´")
     cid = await client_id(event)
-    ForGo10God, DOMINATOR_USER = cid[0], cid[1]
-    dominator_mention = f"<a href='tg://user?id={ForGo10God}'>{DOMINATOR_USER}</a>"
+    ForGo10God, HELL_USER = cid[0], cid[1]
+    hell_mention = f"<a href='tg://user?id={ForGo10God}'>{HELL_USER}</a>"
     uptime = await get_time((time.time() - StartTime))
     end = datetime.datetime.now()
     ms = (end - start).microseconds / 1000
     if PIC:
         await event.client.send_file(event.chat_id,
                                      file=PIC,
-                                     caption=ping_txt.format(ms, uptime, dominator_mention),
+                                     caption=ping_txt.format(ms, uptime, hell_mention),
                                      parse_mode="HTML",
                                  )
         await event.delete()
     else:
-        await event.edit(ping_txt.format(ms, uptime, dominator_mention), parse_mode="HTML")
+        await event.edit(ping_txt.format(ms, uptime, hell_mention), parse_mode="HTML")
 
 
-@dominator_cmd(pattern="limits$")
+@hell_cmd(pattern="limits$")
 async def is_limited(event):
     chat = "@SpamBot"
     msg = await eor(event, "Checking your account limit...")
@@ -68,9 +68,9 @@ async def is_limited(event):
         await event.client.delete_messages(conv.chat_id, [first.id, response.id])
 
         
-@dominator_cmd(pattern="kickme$")
+@hell_cmd(pattern="kickme$")
 async def leave(e):
-        await e.edit("😪 **KThnxBye** See u all in dominator!!")
+        await e.edit("😪 **KThnxBye** See u all in hell!!")
         time.sleep(1)
         if "-" in str(e.chat_id):
             await event.client(LeaveChannelRequest(e.chat_id))
@@ -78,13 +78,13 @@ async def leave(e):
             await eod(e, "**Iz this even a grp?😑**")
 
 
-@dominator_cmd(pattern="dc$")
+@hell_cmd(pattern="dc$")
 async def _(event):
     result = await event.client(functions.help.GetNearestDcRequest())
     await eor(event, result.stringify())
 
 
-@dominator_cmd(pattern="config$")
+@hell_cmd(pattern="config$")
 async def _(event):
     result = await event.client(functions.help.GetConfigRequest())
     result = result.stringify()
@@ -92,24 +92,24 @@ async def _(event):
     await eor(event, "Config Saved In You Heroku Logs.")
 
 
-@dominator_cmd(pattern="vars(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="vars(?:\s|$)([\s\S]*)")
 async def lst(event):
     flag = (event.text[6:9]).lower()
     if flag and flag == "-db":
-        dominator = await eor(event, "Getting DB variables..")
+        hell = await eor(event, "Getting DB variables..")
         dbx = "**• List of DB Variables:** \n\n"
         for data in db_config:
             dbx += f"» `{data}`\n"
-        await dominator.edit(dbx)
+        await hell.edit(dbx)
     else:
-        dominator = await eor(event, "Getting configs list...")
+        hell = await eor(event, "Getting configs list...")
         osx = "**• List of OS Configs:** \n\n"
         for data in os_config:
             osx += f"» `{data}`\n"
-        await dominator.edit(osx)
+        await hell.edit(osx)
 
 
-@dominator_cmd(pattern="schd(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="schd(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     ttl = 0
@@ -128,7 +128,7 @@ async def _(event):
         await eor(event, message)
 
 
-@dominator_cmd(pattern="dm(?:\s|$)([\s\S]*)")
+@hell_cmd(pattern="dm(?:\s|$)([\s\S]*)")
 async def _(event):
     if len(event.text) > 3:
         if not event.text[3] == " ":
@@ -168,7 +168,7 @@ CmdHelp("bot").add_command(
 ).add_command(
     "ping", None, "Checks the ping speed of your Hêllẞø†"
 ).add_command(
-    "schd", "<secs> - <message>", "Sends your message in given secs", "schd 10 - dominatoro"
+    "schd", "<secs> - <message>", "Sends your message in given secs", "schd 10 - Hello"
 ).add_command(
     "dm", "<username or user id> <message>", "Sends a DM to given username with required msg"
 ).add_command(
