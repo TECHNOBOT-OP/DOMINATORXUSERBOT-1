@@ -1,6 +1,6 @@
 from . import *
 
-@hell_cmd(pattern="carry ([\s\S]*)")
+@dominator_cmd(pattern="carry ([\s\S]*)")
 async def kraken(carry):
     name = carry.pattern_match.group(1)
     await eor(
@@ -9,14 +9,14 @@ async def kraken(carry):
     )
 
 
-@hell_cmd(pattern="ded ([\s\S]*)")
+@dominator_cmd(pattern="ded ([\s\S]*)")
 async def kraken(event):
     xyz = await client_id(event)
-    hell_mention = xyz[2]
+    dominator_mention = xyz[2]
     name = event.pattern_match.group(1)
     await eor(
         event,
-        f"{hell_mention} --- {name}          \n　　　　　|"
+        f"{dominator_mention} --- {name}          \n　　　　　|"
         "\n　　　　　| \n"
         "　　　　　| \n"
         "　　　　　| \n"
@@ -33,13 +33,13 @@ async def kraken(event):
     )
 
 
-@hell_cmd(pattern="sthink ([\s\S]*)")
+@dominator_cmd(pattern="sthink ([\s\S]*)")
 async def kraken(event):
     xyz = await client_id(event)
-    hell_mention = xyz[2]
+    dominator_mention = xyz[2]
     name = event.pattern_match.group(1)
     B = (
-        f"**{hell_mention} ~> {name} .\n\n**"
+        f"**{dominator_mention} ~> {name} .\n\n**"
         "⠀⠀⠀⠀⢀⣀⣀⣀\n"
         "⠀⠀⠀⠰⡿⠿⠛⠛⠻⠿⣷\n"
         "⠀⠀⠀⠀⠀⠀⣀⣄⡀⠀⠀⠀⠀⢀⣀⣀⣤⣄⣀⡀\n"
@@ -59,13 +59,13 @@ async def kraken(event):
     await eor(event, B)
 
 
-@hell_cmd(pattern="sfrog ([\s\S]*)")
+@dominator_cmd(pattern="sfrog ([\s\S]*)")
 async def kraken(event):
     xyz = await client_id(event)
-    hell_mention = xyz[2]
+    dominator_mention = xyz[2]
     name = event.pattern_match.group(1)
     C = (
-        f"**{hell_mention} ~> {name} .\n\n**"
+        f"**{dominator_mention} ~> {name} .\n\n**"
         "⠄⠄⠄⠄⠄⣀⣀⣤⣶⣿⣿⣶⣶⣶⣤⣄⣠⣴⣶⣿⣶⣦⣄⠄\n"
         "⠄⣠⣴⣾⣿⠿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣦\n"
         "⢠⠾⣋⣭⣄⡀⠄⠙⠻⣿⣿⡿⠛⠋⠉⠉⠉⠙⠛⠿⣿⣿⣿⣿\n"
@@ -85,13 +85,13 @@ async def kraken(event):
     await eor(event, C)
 
 
-@hell_cmd(pattern="sdead ([\s\S]*)")
+@dominator_cmd(pattern="sdead ([\s\S]*)")
 async def kraken(event):
     xyz = await client_id(event)
-    hell_mention = xyz[2]
+    dominator_mention = xyz[2]
     name = event.pattern_match.group(1)
     D = (
-        f"**{hell_mention} ~> {name} .\n\n**"
+        f"**{dominator_mention} ~> {name} .\n\n**"
         "⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n"
         "⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n"
         "⣿⣿⣿⡇⠄⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿\n"
@@ -111,7 +111,7 @@ async def kraken(event):
     await eor(event, D)
 
 
-@hell_cmd(pattern="strump ([\s\S]*)")
+@dominator_cmd(pattern="strump ([\s\S]*)")
 async def kraken(trumpsay):
     name = trumpsay.pattern_match.group(1)
     E = (
@@ -135,7 +135,7 @@ async def kraken(trumpsay):
     await eor(trumpsay, E)
 
 
-@hell_cmd(pattern="schina ([\s\S]*)")
+@dominator_cmd(pattern="schina ([\s\S]*)")
 async def kraken(ckmkb):
     name = ckmkb.pattern_match.group(1)
     F = (
@@ -160,7 +160,7 @@ async def kraken(ckmkb):
     await eor(ckmkb, F)
 
 
-@hell_cmd(pattern="sshit$")
+@dominator_cmd(pattern="sshit$")
 async def kraken(shit):
     A = (
         "⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀\n"
@@ -179,7 +179,7 @@ async def kraken(shit):
     await eor(shit, A)
 
 
-@hell_cmd(pattern="elove$")
+@dominator_cmd(pattern="elove$")
 async def kakashi(event):
     await eor(
         event,
@@ -242,7 +242,7 @@ L = (
     "╬═╬ \n"
     "╬═╬ \n"
     "╬═╬ \n"
-    "╬═╬ Hello, My Friend :D \n"
+    "╬═╬ dominatoro, My Friend :D \n"
     "╬═╬☻/ \n"
     "╬═╬/▌ \n"
     "╬═╬/ \\n"
@@ -465,72 +465,72 @@ T = (
 )
 
 
-@hell_cmd(pattern="monster$")
+@dominator_cmd(pattern="monster$")
 async def _(monster):
     await eor(monster, G)
 
 
-@hell_cmd(pattern="pig$")
+@dominator_cmd(pattern="pig$")
 async def _(pig):
     await eor(pig, H)
 
 
-@hell_cmd(pattern="gun$")
+@dominator_cmd(pattern="gun$")
 async def _(gun):
     await eor(gun, I)
 
 
-@hell_cmd(pattern="dog$")
+@dominator_cmd(pattern="dog$")
 async def _(dog):
     await eor(dog, J)
 
 
-@hell_cmd(pattern="hello$")
-async def _(hello):
-    await eor(hello, K)
+@dominator_cmd(pattern="dominatoro$")
+async def _(dominatoro):
+    await eor(dominatoro, K)
 
 
-@hell_cmd(pattern="hmf$")
+@dominator_cmd(pattern="hmf$")
 async def _(hmf):
     await eor(hmf, L)
 
 
-@hell_cmd(pattern="couple$")
+@dominator_cmd(pattern="couple$")
 async def _(couple):
     await eor(couple, M)
 
 
-@hell_cmd(pattern="sup$")
+@dominator_cmd(pattern="sup$")
 async def _(supreme):
     await eor(supreme, N)
 
 
-@hell_cmd(pattern="india$")
+@dominator_cmd(pattern="india$")
 async def _(event):
     await eor(event, O)
 
 
-@hell_cmd(pattern="wc$")
+@dominator_cmd(pattern="wc$")
 async def _(welcome):
     await eor(welcome, P)
 
 
-@hell_cmd(pattern="snk$")
+@dominator_cmd(pattern="snk$")
 async def _(snake):
     await eor(snake, Q)
 
 
-@hell_cmd(pattern="bye$")
+@dominator_cmd(pattern="bye$")
 async def _(bye):
     await eor(bye, R)
 
 
-@hell_cmd(pattern="shitos$")
+@dominator_cmd(pattern="shitos$")
 async def _(shitos):
     await eor(shitos, S)
 
 
-@hell_cmd(pattern="dislike$")
+@dominator_cmd(pattern="dislike$")
 async def _(dislike):
     await eor(dislike, T)
 
@@ -546,7 +546,7 @@ CmdHelp("arts").add_command(
 ).add_command(
   'dog', None, 'Use and see'
 ).add_command(
-  'hello', None, 'Use and see'
+  'dominatoro', None, 'Use and see'
 ).add_command(
   'hmf', None, 'Use and see'
 ).add_command(

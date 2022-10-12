@@ -20,7 +20,7 @@ if not os.path.isdir(extracted):
     os.makedirs(extracted)
 
 
-@hell_cmd(pattern="zip$")
+@dominator_cmd(pattern="zip$")
 async def _(event):
     if not event.is_reply:
         await eod(event, "Reply to a file to compress it. Bruh.")
@@ -61,7 +61,7 @@ def zipdir(path, ziph):
             os.remove(os.path.join(root, file))
 
 
-@hell_cmd(pattern="compress$")
+@dominator_cmd(pattern="compress$")
 async def _(event):
     if not event.is_reply:
         await eor(event, "Reply to a file to compress it.")
@@ -90,7 +90,7 @@ async def _(event):
     await event.client.send_file(
         event.chat_id,
         directory_name + ".zip",
-        caption="Zipped By UltronBot",
+        caption="Zipped By DominatorBot",
         force_document=True,
         allow_cache=False,
         reply_to=event.message.id,
@@ -107,7 +107,7 @@ def zipdir(path, ziph):
             os.remove(os.path.join(root, file))
 
 
-@hell_cmd(pattern="rar ([\s\S]*)")
+@dominator_cmd(pattern="rar ([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     mone = await eor(event, "Processing ...")
@@ -132,7 +132,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 directory_name + ".rar",
-                caption="rarred By UltronBot",
+                caption="rarred By DominatorBot",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -154,7 +154,7 @@ async def _(event):
         )
 
 
-@hell_cmd(pattern="7z ([\s\S]*)")
+@dominator_cmd(pattern="7z ([\s\S]*)")
 async def _(event): 
     input_str = event.pattern_match.group(1)
     mone = await eor(event, "Processing ...")
@@ -179,7 +179,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 directory_name + ".7z",
-                caption="7z archived By UltronBot",
+                caption="7z archived By DominatorBot",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -199,7 +199,7 @@ async def _(event):
         await mone.edit("Local file compressed to `{}`".format(directory_name + ".7z"))
 
 
-@hell_cmd(pattern="tar ([\s\S]*)")
+@dominator_cmd(pattern="tar ([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     mone = await eor(event, "Processing ...")
@@ -228,7 +228,7 @@ async def _(event):
             await event.client.send_file(
                 event.chat_id,
                 output,
-                caption="TAR By UltronBot",
+                caption="TAR By DominatorBot",
                 force_document=True,
                 allow_cache=False,
                 reply_to=event.message.id,
@@ -277,7 +277,7 @@ async def create_archive(input_directory):
     return return_name
 
 
-@hell_cmd(pattern="unzip$")
+@dominator_cmd(pattern="unzip$")
 async def _(event):
     mone = await eor(event, "Processing ...")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -363,7 +363,7 @@ async def _(event):
         os.remove(downloaded_file_name)
 
 
-@hell_cmd(pattern="unrar$")
+@dominator_cmd(pattern="unrar$")
 async def _(event):
     mone = await eor(event, "Processing ...")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):
@@ -448,7 +448,7 @@ async def _(event):
         os.remove(downloaded_file_name)
 
 
-@hell_cmd(pattern="untar$")
+@dominator_cmd(pattern="untar$")
 async def _(event):
     mone = await eor(event, "Processing ...")
     if not os.path.isdir(Config.TMP_DOWNLOAD_DIRECTORY):

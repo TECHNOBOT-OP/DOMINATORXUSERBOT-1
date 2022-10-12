@@ -7,79 +7,79 @@ from telethon.errors.rpcerrorlist import ChatSendMediaForbiddenError
 from . import *
 
 
-@hell_cmd(pattern="anime(?:\s|$)([\s\S]*)")
+@dominator_cmd(pattern="anime(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.text[7:]
     if query == "":
         return await eor(event, "Please give anime name to search on Anilist.")
-    hell = await eor(event, f"__Searching for__ `{query}` __on Anilist.__")
+    dominator = await eor(event, f"__Searching for__ `{query}` __on Anilist.__")
     qdb = rand_key()
     ANIME_DB[qdb] = query
     result = await get_anilist(qdb, 1)
     if len(result) == 1:
-        return await hell.edit(result[0])
+        return await dominator.edit(result[0])
     pic, msg = result[0], result[1][0]
     try:
         await event.client.send_file(event.chat_id, file=pic, caption=msg, force_document=False)
-        await hell.delete()
+        await dominator.delete()
     except ChatSendMediaForbiddenError:
-        await hell.edit(msg)
+        await dominator.edit(msg)
     if os.path.exists(pic):
         os.remove(pic)
 
 
-@hell_cmd(pattern="manga(?:\s|$)([\s\S]*)")
+@dominator_cmd(pattern="manga(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.text[7:]
     if query == "":
         await eor(event, "Please give manga name to search..")
-    hell = await eor(event, f"__Searching for__ `{query}` ...")
+    dominator = await eor(event, f"__Searching for__ `{query}` ...")
     qdb = rand_key()
     MANGA_DB[qdb] = query
     result = await get_manga(qdb, 1)
     if len(result) == 1:
-        return await hell.edit(result[0])
+        return await dominator.edit(result[0])
     pic, finals_ = result[0], result[1][0]
     try:
         await event.client.send_file(event.chat_id, file=pic, caption=finals_)
-        await hell.delete()
+        await dominator.delete()
     except ChatSendMediaForbiddenError:
-        await hell.edit(finals_)
+        await dominator.edit(finals_)
     if os.path.exists(pic):
         os.remove(pic)
 
 
-@hell_cmd(pattern="character(?:\s|$)([\s\S]*)")
+@dominator_cmd(pattern="character(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.text[11:]
     if query == "":
         return await eor(event, "Give character name to get details.")
-    hell = await eor(event, f"__Searching for__ `{query}`")
+    dominator = await eor(event, f"__Searching for__ `{query}`")
     qdb = rand_key()
     CHARC_DB[qdb]=query
     result = await get_character(qdb, 1)
     if len(result) == 1:
-        return await hell.edit(result[0])
+        return await dominator.edit(result[0])
     img = result[0]
     cap_text = result[1][0]
     try:
         await event.client.send_file(event.chat_id, file=img, caption=cap_text)
-        await hell.delete()
+        await dominator.delete()
     except ChatSendMediaForbiddenError:
-        await hell.delete(cap_text)
+        await dominator.delete(cap_text)
     if os.path.exists(img):
         os.remove(img)
 
 
-@hell_cmd(pattern="fillers(?:\s|$)([\s\S]*)")
+@dominator_cmd(pattern="fillers(?:\s|$)([\s\S]*)")
 async def canon(event):
-    hell = event.text[9:]
-    if hell == "":
+    dominator = event.text[9:]
+    if dominator == "":
         return await eor(event, "`Give anime name to search filler episodes.`")
-    nub = await eor(event, f"Searching Filler Episodes For `{hell}`")
-    hel_ = search_filler(hell)
+    nub = await eor(event, f"Searching Filler Episodes For `{dominator}`")
+    hel_ = search_filler(dominator)
     if hel_ == {}:
-        return await nub.edit(f"No filler found for `{hell}`")
+        return await nub.edit(f"No filler found for `{dominator}`")
     list_ = list(hel_.keys())
     if len(list_) == 1:
         result = parse_filler(hel_.get(list_[0]))
@@ -96,7 +96,7 @@ async def canon(event):
         paste = await telegraph_paste(f"📃 Fillers List For “ {list_[0]} ”", msg)
         await nub.edit(f"**📃 Filler Episode List For [“ {list_[0]} ”]({paste}) !!**")
         return
-    UltronBot = f"**📃 Filler Episode Lists :** \n\n"
+    DominatorBot = f"**📃 Filler Episode Lists :** \n\n"
     for i in list_:
         result = parse_filler(hel_.get(i))
         msg = ""
@@ -110,58 +110,58 @@ async def canon(event):
             msg += "\n\n<b>Anime Canon episodes :</b>\n"
             msg += f'<code>{str(result.get("ac_ep"))}</code>'
         paste = await telegraph_paste(f"📃 Fillers List For “ {i} ”", msg)
-        UltronBot += f"• [{i}]({paste})\n"
-    await nub.edit(UltronBot)
+        DominatorBot += f"• [{i}]({paste})\n"
+    await nub.edit(DominatorBot)
 
 
-@hell_cmd(pattern="airing(?:\s|$)([\s\S]*)")
+@dominator_cmd(pattern="airing(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.text[8:]
-    hell = await eor(event, f"__Searching airing details for__ `{query}`")
+    dominator = await eor(event, f"__Searching airing details for__ `{query}`")
     if query == "":
-        return await eod(hell, "Give anime name to seaech airing information.")
+        return await eod(dominator, "Give anime name to seaech airing information.")
     vars_ = {"search": query}
     if query.isdigit():
         vars_ = {"id": int(query), "asHtml": True}
     result = await get_airing(vars_)
     if len(result) == 1:
-        return await hell.edit(result[0])
+        return await dominator.edit(result[0])
     coverImg, out = result[0]
     try:
         await event.client.send_file(event.chat_id, coverImg, caption=out, force_document=False)
-        await hell.delete()
+        await dominator.delete()
     except ChatSendMediaForbiddenError:
-        await hell.edit(out)
+        await dominator.edit(out)
     if os.path.exists(coverImg):
         os.remove(coverImg)
 
 
-@hell_cmd(pattern="aniuser(?:\s|$)([\s\S]*)")
+@dominator_cmd(pattern="aniuser(?:\s|$)([\s\S]*)")
 async def _(event):
     query = event.text[9:]
-    hell = await eor(event, "Searching user's Anilist Stats...")
+    dominator = await eor(event, "Searching user's Anilist Stats...")
     if query == "":
-        return await hell.edit("No user found. Give anilist username.")
+        return await dominator.edit("No user found. Give anilist username.")
     qry = {"search": query}
     result = await get_user(qry)
     if len(result) == 1:
-        return await eod(hell, result[0])
+        return await eod(dominator, result[0])
     pic, msg = result
     try:
         await event.client.send_file(event.chat_id, file=pic, caption=msg, force_document=False, parse_mode="HTML")
-        await hell.delete()
+        await dominator.delete()
     except ChatSendMediaForbiddenError:
-        await hell.edit(msg)
+        await dominator.edit(msg)
     if os.path.exists(pic):
         os.remove(pic)
 
 
-@hell_cmd(pattern="aniquote$")
+@dominator_cmd(pattern="aniquote$")
 async def quote(event):
-    hell = await eor(event, "(ﾉ◕ヮ◕)ﾉ*.✧")
+    dominator = await eor(event, "(ﾉ◕ヮ◕)ﾉ*.✧")
     q = requests.get("https://animechan.vercel.app/api/random").json()
     await asyncio.sleep(1.5)
-    await hell.edit("`"+q["quote"]+"`\n\n—  **"+q["character"]+"** (From __"+q["anime"]+"__)") #dimag ka bhosda hogya bc yha pe (*﹏*;)
+    await dominator.edit("`"+q["quote"]+"`\n\n—  **"+q["character"]+"** (From __"+q["anime"]+"__)") #dimag ka bhosda hogya bc yha pe (*﹏*;)
 
 
 CmdHelp("anime").add_command(
@@ -171,7 +171,7 @@ CmdHelp("anime").add_command(
 ).add_command(
   "character", "<character name>", "Searches for the given anime character and sends the details.", "character Mai Sakurajima"
 ).add_command(
-  "aniuser", "<anilist username>", "Searches for the Anilist Stats of the given user.", "aniuser meizhellboy"
+  "aniuser", "<anilist username>", "Searches for the Anilist Stats of the given user.", "aniuser meizdominatorboy"
 ).add_command(
   "airing", "<anime name>", "Searches for the airing info of given anime."
 ).add_command(

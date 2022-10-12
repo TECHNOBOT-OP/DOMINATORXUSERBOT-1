@@ -5,22 +5,22 @@ from telethon.errors import FloodWaitError
 from telethon.tl import functions
 from telethon.tl.functions.channels import GetAdminedPublicChannelsRequest
 
-from UltronBot.sql.gvar_sql import addgvar, delgvar, gvarstat
+from DominatorBot.sql.gvar_sql import addgvar, delgvar, gvarstat
 from . import *
 
 DEL_TIME_OUT = 60
 
 
-@hell_cmd(pattern="autoname$")
+@dominator_cmd(pattern="autoname$")
 async def _(event):
-    hell = await eor(event, "`Starting AutoName Please Wait`")
-    _id, HELL_USER, _ment = await client_id(event)
-    await hell.edit(f"Auto Name has been started my Master")
+    dominator = await eor(event, "`Starting AutoName Please Wait`")
+    _id, DOMINATOR_USER, _ment = await client_id(event)
+    await dominator.edit(f"Auto Name has been started my Master")
     await event.client.send_message(Config.LOGGER_ID, "#AUTONAME \n\nAutoname Started!!")
     while True:
         HB = time.strftime("%d-%m-%y")
         HE = time.strftime("%H:%M")
-        name = f"🕒{HE} ⚡{HELL_USER}⚡ 📅{HB}"
+        name = f"🕒{HE} ⚡{DOMINATOR_USER}⚡ 📅{HB}"
         logger.info(name)
         try:
             await event.client(
@@ -34,10 +34,10 @@ async def _(event):
         await asyncio.sleep(DEL_TIME_OUT)
 
 
-@hell_cmd(pattern="autobio$")
+@dominator_cmd(pattern="autobio$")
 async def _(event):
-    hell = await eor(event, "Starting AutoBio...")
-    await hell.edit("AutoBio Activated...")
+    dominator = await eor(event, "Starting AutoBio...")
+    await dominator.edit("AutoBio Activated...")
     await event.client.send_message(Config.LOGGER_ID, "#AUTOBIO \n\nAutoBio Started!!")
     while True:
         DMY = time.strftime("%d.%m.%Y")
@@ -58,7 +58,7 @@ async def _(event):
         await asyncio.sleep(DEL_TIME_OUT)
 
 
-@hell_cmd(pattern="reserved$")
+@dominator_cmd(pattern="reserved$")
 async def mine(event):
     result = await event.client(GetAdminedPublicChannelsRequest())
     output_str = ""

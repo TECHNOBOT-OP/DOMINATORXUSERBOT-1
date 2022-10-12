@@ -3,7 +3,7 @@ import asyncio
 from telethon.tl.functions.channels import EditBannedRequest
 from telethon.tl.types import ChatBannedRights
 
-from UltronBot.sql import antiflood_sql as sq
+from DominatorBot.sql import antiflood_sql as sq
 from . import *
 
 CHAT_FLOOD = sq.__load_flood_settings()
@@ -12,7 +12,7 @@ ANTI_FLOOD_WARN_MODE = ChatBannedRights(
 )
 
 
-@hell_handler()
+@dominator_handler()
 async def _(event):
     if not CHAT_FLOOD:
         return
@@ -53,7 +53,7 @@ because he reached the defined flood limit.""".format(
         )
 
 
-@hell_cmd(pattern="setflood(?:\s|$)([\s\S]*)")
+@dominator_cmd(pattern="setflood(?:\s|$)([\s\S]*)")
 async def _(event):
     input_str = event.pattern_match.group(1)
     event = await eor(event, "updating flood settings!")

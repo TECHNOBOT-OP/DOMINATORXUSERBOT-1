@@ -124,11 +124,6 @@ def unlock(event):
             until_date=None,
             change_info=False,
         )
-    if event == "link":
-        rights = ChatBannedRights(
-            until_date=None,
-            change_info=False,
-        )
     return rights
 
 

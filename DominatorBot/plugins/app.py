@@ -3,12 +3,12 @@ import requests
 from . import *
 
 
-@hell_cmd(pattern="app ([\s\S]*)")
+@dominator_cmd(pattern="app ([\s\S]*)")
 async def apk(event):
     app_name = event.text[5:]
     event = await eor(event, f"Searching for {app_name}...")
     xyz = await client_id(event)
-    HELL_USER = xyz[1]
+    DOMINATOR_USER = xyz[1]
     try:
         remove_space = app_name.split(" ")
         final_name = "+".join(remove_space)
@@ -66,7 +66,7 @@ async def apk(event):
             + app_link
             + "'>View in Play Store</a>"
         )
-        app_details += f"\n\n==> {HELL_USER} <=="
+        app_details += f"\n\n==> {DOMINATOR_USER} <=="
         await event.edit(app_details, link_preview=True, parse_mode="HTML")
     except IndexError:
         await event.edit("No result found in search. Please enter **Valid app name**")
@@ -74,7 +74,7 @@ async def apk(event):
         await event.edit("Exception Occured:- " + str(err))
 
 
-@hell_cmd(pattern="appr ([\s\S]*)")
+@dominator_cmd(pattern="appr ([\s\S]*)")
 async def apkr(event):
     app_name = event.text[6:]
     event = await eor(event, f"Searching for {app_name}...")
@@ -144,17 +144,17 @@ async def apkr(event):
         await event.edit("Exception Occured:- " + str(err))
 
 
-@hell_cmd(pattern="mods ([\s\S]*)")
+@dominator_cmd(pattern="mods ([\s\S]*)")
 async def mod(event):
-    hell = event.text[6:]
-    if not hell:
+    dominator = event.text[6:]
+    if not dominator:
         if event.is_reply:
             (await event.get_reply_message()).message
         else:
             await eod(uwu, "Give name of apk to search mod...")
             return
-    uwu = await eor(event, f"Searching Mod for  `{hell}` ...")
-    troll = await event.client.inline_query("PremiumAppBot", f"{(deEmojify(hell))}")
+    uwu = await eor(event, f"Searching Mod for  `{dominator}` ...")
+    troll = await event.client.inline_query("PremiumAppBot", f"{(deEmojify(dominator))}")
     owo = await troll[0].click(Config.LOGGER_ID)
     owo_id = owo.id
     modd = await event.client.get_messages(entity=Config.LOGGER_ID, ids=owo_id)

@@ -1,24 +1,24 @@
 import datetime
 import time
 
-from UltronBot import *
-from UltronBot.clients import *
-from UltronBot.config import Config
-from UltronBot.helpers import *
-from UltronBot.utils import *
-from UltronBot.random_strings import *
-from UltronBot.version import __hell__
-from UltronBot.sql.gvar_sql import gvarstat
+from DominatorBot import *
+from DominatorBot.clients import *
+from DominatorBot.config import Config
+from DominatorBot.helpers import *
+from DominatorBot.utils import *
+from DominatorBot.random_strings import *
+from DominatorBot.version import __dominator__
+from DominatorBot.sql.gvar_sql import gvarstat
 from telethon import version
 
-hell_logo = "./UltronBot/resources/pics/UltronBot_logo.jpg"
-cjb = "./UltronBot/resources/pics/cjb.jpg"
-restlo = "./UltronBot/resources/pics/rest.jpeg"
-shuru = "./UltronBot/resources/pics/shuru.jpg"
-shhh = "./UltronBot/resources/pics/chup_madarchod.jpeg"
+dominator_logo = "./DominatorBot/resources/pics/DominatorBot_logo.jpg"
+cjb = "./DominatorBot/resources/pics/cjb.jpg"
+restlo = "./DominatorBot/resources/pics/rest.jpeg"
+shuru = "./DominatorBot/resources/pics/shuru.jpg"
+shhh = "./DominatorBot/resources/pics/chup_madarchod.jpeg"
 hl = Config.HANDLER
 shl = Config.SUDO_HANDLER
-hell_ver = __hell__
+dominator_ver = __dominator__
 tel_ver = version.__version__
 
 async def get_user_id(ids):
@@ -37,17 +37,17 @@ else:
     abuse_m ="Disabled"
 
 
-my_channel = Config.MY_CHANNEL or "@UltronBot_OP"
-my_group = Config.MY_GROUP or "@UltronBot_XD"
+my_channel = Config.MY_CHANNEL or "@DominatorBot_OP"
+my_group = Config.MY_GROUP or "@DominatorBot_XD"
 if "@" in my_channel:
     my_channel = my_channel.replace("@", "")
 if "@" in my_group:
     my_group = my_group.replace("@", "")
 
-chnl_link = "https://t.me/UltronBot_XD"
-hell_channel = f"[✨ԱӀէɾօղβօէ✨]({chnl_link})"
-grp_link = "https://t.me/UltronBot_Chat"
-hell_grp = f"[✨ԱӀէɾօղβօէ Ɠɾօմք✨]({grp_link})"
+chnl_link = "https://t.me/DominatorBot_XD"
+dominator_channel = f"[✨ԱӀէɾօղβօէ✨]({chnl_link})"
+grp_link = "https://t.me/DominatorBot_Chat"
+dominator_grp = f"[✨ԱӀէɾօղβօէ Ɠɾօմք✨]({grp_link})"
 
 WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attractive.**
   {mention} :  To mention the user
@@ -66,4 +66,4 @@ WELCOME_FORMAT = """**Use these fomats in your welcome note to make them attract
 """
 # will add more soon
 
-# UltronBot
+# DominatorBot

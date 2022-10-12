@@ -5,7 +5,7 @@ import time
 from telethon.errors import ChatSendInlineForbiddenError as noin
 from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot
 
-from UltronBot.sql.gvar_sql import gvarstat
+from DominatorBot.sql.gvar_sql import gvarstat
 from . import *
 
 #-------------------------------------------------------------------------------
@@ -27,7 +27,7 @@ ALIVE_TEMP = """
 ┣<b><i>. <a href='https://t.me/LegendHacker_IIN'>[🆃🅷🅰🅽🅾🆂🅱🅾🆈]</a> .</i></b>
 ╚══════════✣✤༻⋇༺✤✣════════╝
 ┏━━━━━(φօաҽɾƑմӀӀ=ԱӀէɾօղβօէ)━━━━━┓
-┣─<b><i>💥💥💥 <a href='https://t.me/UltronBot_XD'>[♦️ටղƑìɾҽ-ԱӀէɾօղβօէ♦️]</a> 💥💥💥</i></b>
+┣─<b><i>💥💥💥 <a href='https://t.me/DominatorBot_XD'>[♦️ටղƑìɾҽ-ԱӀէɾօղβօէ♦️]</a> 💥💥💥</i></b>
 ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
 """
 
@@ -41,12 +41,12 @@ msg = """{}\n
 """
 #-------------------------------------------------------------------------------
 
-@hell_cmd(pattern="alive$")
+@dominator_cmd(pattern="alive$")
 async def up(event):
     cid = await client_id(event)
-    ForGo10God, HELL_USER, hell_mention = cid[0], cid[1], cid[2]
+    ForGo10God, DOMINATOR_USER, dominator_mention = cid[0], cid[1], cid[2]
     start = datetime.datetime.now()
-    hell = await eor(event, "`ԱӀէɾօղβօէ įʂ ටղƑìɾҽ....`")
+    dominator = await eor(event, "`ԱӀէɾօղβօէ įʂ ටղƑìɾҽ....`")
     uptime = await get_time((time.time() - StartTime))
     a = gvarstat("ALIVE_PIC")
     pic_list = []
@@ -60,25 +60,25 @@ async def up(event):
         PIC = "https://telegra.ph/file/eaad0c60c09f04bdb2024.jpg"
     end = datetime.datetime.now()
     ling = (end - start).microseconds / 1000
-    omk = ALIVE_TEMP.format(ForGo10God, HELL_USER, tel_ver, hell_ver, is_sudo, uptime, ling)
+    omk = ALIVE_TEMP.format(ForGo10God, DOMINATOR_USER, tel_ver, dominator_ver, is_sudo, uptime, ling)
     await event.client.send_file(event.chat_id, file=PIC, caption=omk, parse_mode="HTML")
-    await hell.delete()
+    await dominator.delete()
 
 
 
-@hell_cmd(pattern="ultron$")
-async def hell_a(event):
+@dominator_cmd(pattern="ultron$")
+async def dominator_a(event):
     cid = await client_id(event)
-    ForGo10God, HELL_USER, hell_mention = cid[0], cid[1], cid[2]
+    ForGo10God, DOMINATOR_USER, dominator_mention = cid[0], cid[1], cid[2]
     uptime = await get_time((time.time() - StartTime))
     am = gvarstat("ALIVE_MSG") or "<b>🔥🔥ԱӀէɾօղβօէ įʂ ටղƑìɾҽ🔥🔥</b>"
     try:
-        hell = await event.client.inline_query(Config.BOT_USERNAME, "alive")
-        await hell[0].click(event.chat_id)
+        dominator = await event.client.inline_query(Config.BOT_USERNAME, "alive")
+        await dominator[0].click(event.chat_id)
         if event.sender_id == ForGo10God:
             await event.delete()
     except (noin, dedbot):
-        await eor(event, msg.format(am, tel_ver, hell_ver, uptime, abuse_m, is_sudo), parse_mode="HTML")
+        await eor(event, msg.format(am, tel_ver, dominator_ver, uptime, abuse_m, is_sudo), parse_mode="HTML")
 
 
 CmdHelp("alive").add_command(

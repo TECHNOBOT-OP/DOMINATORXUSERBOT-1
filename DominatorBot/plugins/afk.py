@@ -4,7 +4,7 @@ import datetime
 from telethon import events
 from telethon.tl import functions, types
 
-from UltronBot.sql.gvar_sql import addgvar, gvarstat, delgvar
+from DominatorBot.sql.gvar_sql import addgvar, gvarstat, delgvar
 from . import *
 
 
@@ -65,14 +65,14 @@ async def set_not_afk(event):
         total_afk_time = str((afk_end_1 - afk_start_1))
     current_message = event.message.message
     if "#" not in current_message and gvarstat("AFK") == "YES":
-        UltronBot = await event.client.send_message(
+        DominatorBot = await event.client.send_message(
             event.chat_id,
             "__**Back to Virtual World!**__\nNo Longer AFK.\n⏱️ Was afk for: `"
             + total_afk_time
-            + "`", file=hellpic_1
+            + "`", file=dominatorpic_1
         )
         try:
-            await unsave_gif(event, UltronBot)
+            await unsave_gif(event, DominatorBot)
             delgvar("AFK")
             await event.client.send_message(
                 Config.LOGGER_ID,
@@ -83,13 +83,13 @@ async def set_not_afk(event):
                 event.chat_id,
                 "Please set `LOGGER_ID` "
                 + "for the proper functioning of afk."
-                + f" Ask in {hell_grp} to get help!",
+                + f" Ask in {dominator_grp} to get help!",
                 reply_to=event.message.id,
                 link_preview=False,
                 silent=True,
             )
         await asyncio.sleep(5)
-        await UltronBot.delete()
+        await DominatorBot.delete()
         afk_time_1 = None
 
 
@@ -115,7 +115,7 @@ async def on_afk(event):
                 f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                 + f"\n**💬 Reason :** {reason_1}"
                 )
-        msg = await event.reply(message_to_reply, file=hellpic_1)
+        msg = await event.reply(message_to_reply, file=dominatorpic_1)
         try:
             await unsave_gif(event, msg)
         except:
@@ -136,7 +136,7 @@ async def _(event):
     global afk_start_1
     global afk_end_1
     global reason_1
-    global hellpic_1
+    global dominatorpic_1
     afk_time_1 = None
     last_afk_message_1 = {}
     afk_end_1 = {}
@@ -144,7 +144,7 @@ async def _(event):
     afk_start_1 = start_1.replace(microsecond=0)
     owo = event.text[5:]
     reason_1 = owo
-    hellpic_1 = await event.client.download_media(krakenop)
+    dominatorpic_1 = await event.client.download_media(krakenop)
     if gvarstat("AFK") != "YES":
         last_seen_status = await event.client(
             functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
@@ -154,12 +154,12 @@ async def _(event):
         if owo == "":
             addgvar("AFK", "YES")
             x = await event.client.send_message(
-                event.chat_id, f"**I'm going afk🚶**", file=hellpic_1)
+                event.chat_id, f"**I'm going afk🚶**", file=dominatorpic_1)
             try:
                 await unsave_gif(event, x)
                 xy = await event.client.send_message(
                     Config.LOGGER_ID,
-                    f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `Not Mentioned`", file=hellpic_1
+                    f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `Not Mentioned`", file=dominatorpic_1
                     )
                 try:
                     await unsave_gif(event, xy)
@@ -170,12 +170,12 @@ async def _(event):
         else:
             addgvar("AFK", "YES")
             x = await event.client.send_message(
-                event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_1}`", file=hellpic_1)
+                event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_1}`", file=dominatorpic_1)
             try:
                 await unsave_gif(event, x)
                 xy = await event.client.send_message(
                     Config.LOGGER_ID,
-                    f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `{reason_1}`", file=hellpic_1
+                    f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `{reason_1}`", file=dominatorpic_1
                     )
                 try:
                     await unsave_gif(event, xy)
@@ -198,14 +198,14 @@ if H2:
             total_afk_time = str((afk_end_2 - afk_start_2))
         current_message = event.message.message
         if "#" not in current_message and gvarstat("AFK2") == "YES":
-            UltronBot = await event.client.send_message(
+            DominatorBot = await event.client.send_message(
                 event.chat_id,
                 "__**Back to Virtual World!**__\nNo Longer AFK.\n⏱️ Was afk for: `"
                 + total_afk_time
-                + "`", file=hellpic_2
+                + "`", file=dominatorpic_2
             )
             try:
-                await unsave_gif(event, UltronBot)
+                await unsave_gif(event, DominatorBot)
                 delgvar("AFK2")
                 await event.client.send_message(
                     Config.LOGGER_ID,
@@ -216,13 +216,13 @@ if H2:
                     event.chat_id,
                     "Please set `LOGGER_ID` "
                     + "for the proper functioning of afk."
-                    + f" Ask in {hell_grp} to get help!",
+                    + f" Ask in {dominator_grp} to get help!",
                     reply_to=event.message.id,
                     link_preview=False,
                     silent=True,
                 )
             await asyncio.sleep(5)
-            await UltronBot.delete()
+            await DominatorBot.delete()
             afk_time_2 = None
 
 
@@ -248,7 +248,7 @@ if H2:
                     f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                     + f"\n**💬 Reason :** {reason_2}"
                     )
-            msg = await event.reply(message_to_reply, file=hellpic_2)
+            msg = await event.reply(message_to_reply, file=dominatorpic_2)
             try:
                 await unsave_gif(event, msg)
             except:
@@ -269,7 +269,7 @@ if H2:
         global afk_start_2
         global afk_end_2
         global reason_2
-        global hellpic_2
+        global dominatorpic_2
         afk_time_2 = None
         last_afk_message_2 = {}
         afk_end_2 = {}
@@ -277,7 +277,7 @@ if H2:
         afk_start_2 = start_1.replace(microsecond=0)
         owo = event.text[5:]
         reason_2 = owo
-        hellpic_2 = await event.client.download_media(krakenop)
+        dominatorpic_2 = await event.client.download_media(krakenop)
         if not gvarstat("AFK2"):
             last_seen_status = await event.client(
                 functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
@@ -287,12 +287,12 @@ if H2:
             if owo == "":
                 addgvar("AFK2", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**", file=hellpic_2)
+                    event.chat_id, f"**I'm going afk🚶**", file=dominatorpic_2)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
                         Config.LOGGER_ID,
-                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `Not Mentioned`",file=hellpic_2
+                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `Not Mentioned`",file=dominatorpic_2
                         )
                     try:
                         await unsave_gif(event, xy)
@@ -303,12 +303,12 @@ if H2:
             else:
                 addgvar("AFK2", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_2}`", file=hellpic_2)
+                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_2}`", file=dominatorpic_2)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
                         Config.LOGGER_ID,
-                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `{reason_2}`",file=hellpic_2
+                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `{reason_2}`",file=dominatorpic_2
                         )
                     try:
                         await unsave_gif(event, xy)
@@ -331,14 +331,14 @@ if H3:
             total_afk_time = str((afk_end_3 - afk_start_3))
         current_message = event.message.message
         if "#" not in current_message and gvarstat("AFK3") == "YES":
-            UltronBot = await event.client.send_message(
+            DominatorBot = await event.client.send_message(
                 event.chat_id,
                 "__**Back to Virtual World!**__\nNo Longer AFK.\n⏱️ Was afk for: `"
                 + total_afk_time
-                + "`", file=hellpic_3
+                + "`", file=dominatorpic_3
             )
             try:
-                await unsave_gif(event, UltronBot)
+                await unsave_gif(event, DominatorBot)
                 delgvar("AFK3")
                 await event.client.send_message(
                     Config.LOGGER_ID,
@@ -349,13 +349,13 @@ if H3:
                     event.chat_id,
                     "Please set `LOGGER_ID` "
                     + "for the proper functioning of afk."
-                    + f" Ask in {hell_grp} to get help!",
+                    + f" Ask in {dominator_grp} to get help!",
                     reply_to=event.message.id,
                     link_preview=False,
                     silent=True,
                 )
             await asyncio.sleep(5)
-            await UltronBot.delete()
+            await DominatorBot.delete()
             afk_time_3 = None
 
 
@@ -381,7 +381,7 @@ if H3:
                     f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                     + f"\n**💬 Reason :** {reason_3}"
                     )
-            msg = await event.reply(message_to_reply, file=hellpic_3)
+            msg = await event.reply(message_to_reply, file=dominatorpic_3)
             try:
                 await unsave_gif(event, msg)
             except:
@@ -402,7 +402,7 @@ if H3:
         global afk_start_3
         global afk_end_3
         global reason_3
-        global hellpic_3
+        global dominatorpic_3
         afk_time_3 = None
         last_afk_message_3 = {}
         afk_end_3 = {}
@@ -410,7 +410,7 @@ if H3:
         afk_start_3 = start_1.replace(microsecond=0)
         owo = event.text[5:]
         reason_3 = owo
-        hellpic_3 = await event.client.download_media(krakenop)
+        dominatorpic_3 = await event.client.download_media(krakenop)
         if not gvarstat("AFK3"):
             last_seen_status = await event.client(
                 functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
@@ -420,12 +420,12 @@ if H3:
             if owo == "":
                 addgvar("AFK3", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**", file=hellpic_3)
+                    event.chat_id, f"**I'm going afk🚶**", file=dominatorpic_3)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
                         Config.LOGGER_ID,
-                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `Not Mentioned`",file=hellpic_3
+                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `Not Mentioned`",file=dominatorpic_3
                         )
                     try:
                         await unsave_gif(event, xy)
@@ -436,12 +436,12 @@ if H3:
             else:
                 addgvar("AFK3", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_3}`", file=hellpic_3)
+                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_3}`", file=dominatorpic_3)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
                         Config.LOGGER_ID,
-                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `{reason_3}`",file=hellpic_3
+                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `{reason_3}`",file=dominatorpic_3
                         )
                     try:
                         await unsave_gif(event, xy)
@@ -464,14 +464,14 @@ if H4:
             total_afk_time = str((afk_end_4 - afk_start_4))
         current_message = event.message.message
         if "#" not in current_message and gvarstat("AFK4") == "YES":
-            UltronBot = await event.client.send_message(
+            DominatorBot = await event.client.send_message(
                 event.chat_id,
                 "__**Back to Virtual World!**__\nNo Longer AFK.\n⏱️ Was afk for: `"
                 + total_afk_time
-                + "`", file=hellpic_4
+                + "`", file=dominatorpic_4
             )
             try:
-                await unsave_gif(event, UltronBot)
+                await unsave_gif(event, DominatorBot)
                 delgvar("AFK4")
                 await event.client.send_message(
                     Config.LOGGER_ID,
@@ -482,13 +482,13 @@ if H4:
                     event.chat_id,
                     "Please set `LOGGER_ID` "
                     + "for the proper functioning of afk."
-                    + f" Ask in {hell_grp} to get help!",
+                    + f" Ask in {dominator_grp} to get help!",
                     reply_to=event.message.id,
                     link_preview=False,
                     silent=True,
                 )
             await asyncio.sleep(5)
-            await UltronBot.delete()
+            await DominatorBot.delete()
             afk_time_4 = None
 
 
@@ -514,7 +514,7 @@ if H4:
                     f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                     + f"\n**💬 Reason :** {reason_4}"
                     )
-            msg = await event.reply(message_to_reply, file=hellpic_4)
+            msg = await event.reply(message_to_reply, file=dominatorpic_4)
             try:
                 await unsave_gif(event, msg)
             except:
@@ -535,7 +535,7 @@ if H4:
         global afk_start_4
         global afk_end_4
         global reason_4
-        global hellpic_4
+        global dominatorpic_4
         afk_time_4 = None
         last_afk_message_4 = {}
         afk_end_4 = {}
@@ -543,7 +543,7 @@ if H4:
         afk_start_4 = start_1.replace(microsecond=0)
         owo = event.text[5:]
         reason_4 = owo
-        hellpic_4 = await event.client.download_media(krakenop)
+        dominatorpic_4 = await event.client.download_media(krakenop)
         if not gvarstat("AFK4"):
             last_seen_status = await event.client(
                 functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
@@ -553,12 +553,12 @@ if H4:
             if owo == "":
                 addgvar("AFK4", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**", file=hellpic_4)
+                    event.chat_id, f"**I'm going afk🚶**", file=dominatorpic_4)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
                         Config.LOGGER_ID,
-                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `Not Mentioned`",file=hellpic_4
+                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `Not Mentioned`",file=dominatorpic_4
                         )
                     try:
                         await unsave_gif(event, xy)
@@ -569,12 +569,12 @@ if H4:
             else:
                 addgvar("AFK4", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_4}`", file=hellpic_4)
+                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_4}`", file=dominatorpic_4)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
                         Config.LOGGER_ID,
-                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `{reason_4}`",file=hellpic_4
+                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `{reason_4}`",file=dominatorpic_4
                         )
                     try:
                         await unsave_gif(event, xy)
@@ -597,14 +597,14 @@ if H5:
             total_afk_time = str((afk_end_5 - afk_start_5))
         current_message = event.message.message
         if "#" not in current_message and gvarstat("AFK5") == "YES":
-            UltronBot = await event.client.send_message(
+            DominatorBot = await event.client.send_message(
                 event.chat_id,
                 "__**Back to Virtual World!**__\nNo Longer AFK.\n⏱️ Was afk for: `"
                 + total_afk_time
-                + "`", file=hellpic_5
+                + "`", file=dominatorpic_5
             )
             try:
-                await unsave_gif(event, UltronBot)
+                await unsave_gif(event, DominatorBot)
                 delgvar("AFK5")
                 await event.client.send_message(
                     Config.LOGGER_ID,
@@ -615,13 +615,13 @@ if H5:
                     event.chat_id,
                     "Please set `LOGGER_ID` "
                     + "for the proper functioning of afk."
-                    + f" Ask in {hell_grp} to get help!",
+                    + f" Ask in {dominator_grp} to get help!",
                     reply_to=event.message.id,
                     link_preview=False,
                     silent=True,
                 )
             await asyncio.sleep(5)
-            await UltronBot.delete()
+            await DominatorBot.delete()
             afk_time_5 = None
 
 
@@ -647,7 +647,7 @@ if H5:
                     f"**I'm currently AFK!** \n\n**⏰ AFK Since :**  `{total_afk_time}`\n"
                     + f"\n**💬 Reason :** {reason_5}"
                     )
-            msg = await event.reply(message_to_reply, file=hellpic_5)
+            msg = await event.reply(message_to_reply, file=dominatorpic_5)
             try:
                 await unsave_gif(event, msg)
             except:
@@ -668,7 +668,7 @@ if H5:
         global afk_start_5
         global afk_end_5
         global reason_5
-        global hellpic_5
+        global dominatorpic_5
         afk_time_5 = None
         last_afk_message_5 = {}
         afk_end_5 = {}
@@ -676,7 +676,7 @@ if H5:
         afk_start_5 = start_1.replace(microsecond=0)
         owo = event.text[5:]
         reason_5 = owo
-        hellpic_5 = await event.client.download_media(krakenop)
+        dominatorpic_5 = await event.client.download_media(krakenop)
         if not gvarstat("AFK5"):
             last_seen_status = await event.client(
                 functions.account.GetPrivacyRequest(types.InputPrivacyKeyStatusTimestamp())
@@ -686,12 +686,12 @@ if H5:
             if owo == "":
                 addgvar("AFK5", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**", file=hellpic_5)
+                    event.chat_id, f"**I'm going afk🚶**", file=dominatorpic_5)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
                         Config.LOGGER_ID,
-                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `Not Mentioned`",file=hellpic_5
+                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `Not Mentioned`",file=dominatorpic_5
                         )
                     try:
                         await unsave_gif(event, xy)
@@ -702,12 +702,12 @@ if H5:
             else:
                 addgvar("AFK5", "YES")
                 x = await event.client.send_message(
-                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_5}`", file=hellpic_5)
+                    event.chat_id, f"**I'm going afk🚶**\n\n**Because :** `{reason_5}`", file=dominatorpic_5)
                 try:
                     await unsave_gif(event, x)
                     xy = await event.client.send_message(
                         Config.LOGGER_ID,
-                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `{reason_5}`",file=hellpic_5
+                        f"#AFKTRUE \n**AFK mode** = `True`\n**Reason:** `{reason_5}`",file=dominatorpic_5
                         )
                     try:
                         await unsave_gif(event, xy)
