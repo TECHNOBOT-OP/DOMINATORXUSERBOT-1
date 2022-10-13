@@ -8,9 +8,9 @@ from telethon.errors.rpcerrorlist import BotMethodInvalidError as dedbot, BotInl
 from . import *
 
 msg = f"""
-**⚡ ʟɛɢɛռɖaʀʏ ᴀғ ɦɛʟʟɮօt ⚡**
-  •        [📑 Repo 📑](https://github.com/The-DominatorBot/DominatorBot)
-  •        [DominatorBot Network](https://t.me/DominatorBot_network)
+**⚡ ʟɛɢɛռɖaʀʏ ᴀғ 𝔻𝕠𝕞𝕚𝕟𝕒𝕥𝕠𝕣 ⚡**
+  •        [📑 Repo 📑](https://github.com/dominator454/DOMINATORXBOT)
+  •        [DominatorBot Network](https://t.me/dominator_bot_support)
   •  ©️ {dominator_channel} ™
 """
 botname = Config.BOT_USERNAME
