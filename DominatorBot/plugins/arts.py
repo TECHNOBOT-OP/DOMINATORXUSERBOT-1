@@ -546,7 +546,7 @@ CmdHelp("arts").add_command(
 ).add_command(
   'dog', None, 'Use and see'
 ).add_command(
-  'hello', None, 'Use and see'
+  'hey', None, 'Use and see'
 ).add_command(
   'hmf', None, 'Use and see'
 ).add_command(
