@@ -485,9 +485,9 @@ async def _(dog):
     await eor(dog, J)
 
 
-@dominator_cmd(pattern="hello")
-async def _(hello):
-    await eor(hello, K)
+@dominator_cmd(pattern="hey")
+async def _(hey):
+    await eor(hey, K)
 
 
 @dominator_cmd(pattern="hmf$")
