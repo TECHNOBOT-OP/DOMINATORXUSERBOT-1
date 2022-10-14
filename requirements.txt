@@ -58,6 +58,7 @@ vcsi
 wand
 wget
 wheel
+youtube_dl
 
 git+https://github.com/HellBoy-OP/py-googletrans
 git+https://github.com/HellBoy-OP/Wikipedia
