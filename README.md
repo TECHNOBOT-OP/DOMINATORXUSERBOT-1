@@ -9,4 +9,4 @@ HERE IS ALL THE PLUGIN OF TECHNOBOT
 - Now U Can Deploy This Bot
 
 ## Repl
-- Click Here - [REPL](https://replit.com/@Technoboy02/TechnoString?v=1)
+- Click Here - [REPL]()
