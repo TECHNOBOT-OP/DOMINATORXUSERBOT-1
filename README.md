@@ -1,5 +1,5 @@
 # DOMINATORXBOT
-HERE IS ALL THE PLUGIN OF TECHNOBOT
+HERE IS ALL THE PLUGIN OF DOMINATORBOT
 
 ## Deploy 
 - Click Here :- [main repo](https://github.com/DOMINATOR-XD/DOMINATORXBOT)
@@ -9,4 +9,4 @@ HERE IS ALL THE PLUGIN OF TECHNOBOT
 - Now U Can Deploy This Bot
 
 ## Repl
-- Click Here - [REPL]()
+- Click Here - [REPL](https://replit.com/DOMINATOR-XD/stringforbot?v=1)
