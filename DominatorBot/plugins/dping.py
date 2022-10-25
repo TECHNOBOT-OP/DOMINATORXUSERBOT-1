@@ -12,10 +12,15 @@ from telethon.tl.functions.channels import LeaveChannelRequest
 from ..sql.gvar_sql import gvarstat
 from . import *
 
-ping_txt = """█████████\n█▄█████▄█\n█▼▼▼▼▼\n█🔥Ꭰօʍìղąէօɾβօէ įʂ ටղƑìɾҽ🔥\n█▲▲▲▲▲\n█████████\n██ ██\n
-    ⚘  <i>ʂ℘ɛɛɖ :</i> <code>{}</code>
-    ⚘  <i>ų℘ɬıɱɛ :</i> <code>{}</code>
-    ⚘  <i>ơῳŋɛཞ :</i> {}
+ping_txt = """╔══════ ≪ •❈• ≫ ══════╗
+        𝐘ᴇ  𝐏ʏᴀᴀʀ  𝐌ᴏʜʙʜᴀᴛᴛ  𝐒ᴀʙ 
+         𝐌ᴏʜᴍʜᴀʏᴀ 𝐇𝐚𝐢❤️🥀🥀
+
+                𝐈𝐭𝐧𝐚 𝐦𝐚𝐭 𝐬𝐨𝐜𝐡 𝐩𝐚𝐠𝐥𝐞🥺🙈
+
+          𝐌ᴇ  𝐒ɪʀғ  𝐘ᴀʜᴀ 🇵ɪɴɢ 🇵ᴏɴɢ
+           𝐊ᴀʀɴᴇ 𝐀ᴀʏᴀ 𝐇ᴜ🎉\n⚘  <i>ʂ℘ɛɛɖ :</i> <code>{}</code>\n⚘  <i>ų℘ɬıɱɛ :</i> <code>{}</code>\n⚘  <i>ơῳŋɛཞ :</i> {}
+╚══════ ≪ •❈• ≫ ══════╝
 """
 
 
